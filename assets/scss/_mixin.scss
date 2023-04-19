@@ -1,0 +1,15 @@
+@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+    @font-face {
+      font-family: '#{$font-family}';
+      src: url('#{$file-path}') format('woff2'),
+           url('#{$file-path}?#iefix') format('embedded-opentype'),
+           url('#{$file-path}') format('woff'),
+           url('#{$file-path}') format('truetype');
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+  }
+  
+  // Sử dụng mixin để định nghĩa các font chữ
+  @include font-face('Your Font', '../assets/fonts/your-font.ttf');
+  @include font-face('Another Font', '../assets/fonts/another-font.ttf', 700, italic);
