@@ -13,7 +13,7 @@ arrow.forEach((item) => {
 });
 // với sidebarBtn,sử dụng addEventListener() để thêm sự kiện click vào nút đó. Nếu nút được click sẽ toggle() class close của sidebar và class small-logo của logo.
 sidebarBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('close');
+  sidebar.classList.toggle('sidebar--close');
   logo.classList.toggle('small-logo');
 });
 

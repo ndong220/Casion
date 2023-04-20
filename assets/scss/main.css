@@ -14,14 +14,11 @@ p {
   color: #111111;
   line-height: 24px;
   font-size: 16px;
+  word-break: break-word;
 }
 
 button {
   cursor: pointer;
-}
-
-.pl-10 {
-  padding-left: 10px;
 }
 
 * {
@@ -82,7 +79,7 @@ body {
   transition: all 0.5s ease;
 }
 
-.sidebar.close {
+.sidebar.sidebar--close {
   width: 78px;
 }
 
@@ -92,6 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #193387 0%, #0b1144 100%);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
 }
 
 .sidebar .logo-details img {
@@ -116,11 +114,11 @@ body {
 
 .sidebar .nav-links {
   height: 100%;
-  padding: 30px 0 150px 0;
+  padding: 0px 0 150px 0;
   overflow: auto;
 }
 
-.sidebar.close .nav-links {
+.sidebar.sidebar--close .nav-links {
   overflow: visible;
 }
 
@@ -138,13 +136,13 @@ body {
   background: #0c1245;
 }
 
-.sidebar .nav-links li .iocn-link {
+.sidebar .nav-links li .icon-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.sidebar.close .nav-links li .iocn-link {
+.sidebar.sidebar--close .nav-links li .icon-link {
   display: block;
 }
 
@@ -159,7 +157,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.iocn__img {
+.icon-link__img {
   padding: 25px;
 }
 
@@ -167,7 +165,7 @@ body {
   transform: rotate(-180deg);
 }
 
-.sidebar.close .nav-links i.arrow {
+.sidebar.sidebar--close .nav-links i.arrow {
   display: none;
 }
 
@@ -177,14 +175,14 @@ body {
   text-decoration: none;
 }
 
-.sidebar .nav-links li a .link_name {
+.sidebar .nav-links li a .icon-link__name {
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   transition: all 0.4s ease;
 }
 
-.sidebar.close .nav-links li a .link_name {
+.sidebar.sidebar--close .nav-links li a .icon-link__name {
   opacity: 0;
   pointer-events: none;
 }
@@ -198,6 +196,8 @@ body {
   margin-top: -10px;
   background: #0c1245;
   display: none;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar .nav-links li.showMenu .sub-menu {
@@ -208,7 +208,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
-  padding: 5px 0;
+  padding: 10px 0;
   white-space: nowrap;
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -218,7 +218,7 @@ body {
   opacity: 1;
 }
 
-.sidebar.close .nav-links li .sub-menu {
+.sidebar.sidebar--close .nav-links li .sub-menu {
   position: absolute;
   left: 100%;
   top: -10px;
@@ -231,11 +231,11 @@ body {
   transition: 0s;
 }
 
-.sidebar .nav-links li .sub-menu .link_name {
+.sidebar .nav-links li .sub-menu .icon-link__name {
   display: none;
 }
 
-.sidebar.close .nav-links li .sub-menu .link_name {
+.sidebar.sidebar--close .nav-links li .sub-menu .icon-link__name {
   font-size: 18px;
   opacity: 1;
   display: block;
@@ -263,24 +263,22 @@ body {
   transition: all 0.5s ease;
 }
 
-.sidebar.close ~ .home-section {
+.sidebar.sidebar--close ~ .home-section {
   left: 78px;
   width: calc(100% - 78px);
 }
 
-.home-section .home-content {
+.home-section .home-header {
   height: 60px;
   display: flex;
   align-items: center;
 }
-
-.home-section .home-content .bx-menu,
-.home-section .home-content .text {
-  color: #11101d;
+.home-section .home-header .bx-menu {
+  color: #1e60e1;
   font-size: 35px;
 }
 
-.home-section .home-content .bx-menu {
+.home-section .home-header .bx-menu {
   margin: 0 15px;
   cursor: pointer;
 }
@@ -304,26 +302,34 @@ body {
   margin: 0 10px;
 }
 
-.home-content__icons {
+.home-header__icons {
   display: flex;
   flex: 3;
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
-
-.home-content__icon {
-  font-size: 24px;
-  margin-left: 10px;
+.home-header__icons i:hover {
+  color: #1E60E1;
 }
-
-.home-content__language {
+.home-header__icons .home-header__select-nation {
+  border: none;
+  background-color: #e5e5e5;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0c1245;
+}
+.home-header__icons .home-header__search {
+  padding: 5px;
+}
+.home-header__icons .home-header__language {
   margin: 0 10px;
-}
-
-.home-content__icon--right {
-  margin: 0 5px;
+  display: flex;
 }
 
 .title {
@@ -336,7 +342,7 @@ body {
   font-size: 32px;
   color: #000000;
 }
-.title .title__text--span {
+.title .title__text--total {
   color: #1E60E1;
 }
 
@@ -399,9 +405,6 @@ body {
   font-size: 24px;
   margin-bottom: 8px;
 }
-.tab-content .tab-pane p {
-  word-break: break-word;
-}
 .tab-content .tab__show {
   overflow: hidden;
   height: 110px;
@@ -435,7 +438,7 @@ body {
   transition: opacity 0.3s ease-out, height 0.3s ease-out;
 }
 
-.setting {
+.filter {
   display: flex;
   justify-content: space-between;
   margin: 20px;
@@ -445,25 +448,21 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
-.setting .setting__left {
+.filter .filter__left {
   display: flex;
   align-items: center;
 }
-.setting .setting__left span {
+.filter .filter__left span {
   border: 1px solid #dddddd;
   background-color: #ffffff;
-  padding: 5px;
+  padding: 3px 10px;
   border-radius: 6px;
 }
-.setting .setting__left .remove-item {
-  padding: 5px;
-  border: none;
-}
-.setting .setting-game {
+.filter .filter__game {
   margin-left: 10px;
   margin-right: 10px;
 }
-.setting .btn-reset {
+.filter .filter__reset-btn {
   border: 1px solid #1e60e1;
   border-radius: 6px;
   font-style: normal;
@@ -472,9 +471,9 @@ body {
   line-height: 19px;
   padding: 5px;
   background-color: #ffffff;
-  color: #1e60e1;
+  color: #1E60E1;
 }
-.setting .setting__right {
+.filter .filter__right {
   display: flex;
   align-items: center;
   border: none;
@@ -488,12 +487,12 @@ body {
   cursor: pointer;
   width: 107px;
 }
-.setting .setting__right .setting__right-btn {
-  color: #1e60e1;
+.filter .filter__right .filter__right-btn {
+  color: #1E60E1;
   display: flex;
   align-items: center;
 }
-.setting .setting__right .setting__right-btn img {
+.filter .filter__right .filter__right-btn img {
   padding-right: 10px;
 }
 
@@ -504,13 +503,12 @@ body {
   align-items: center;
   margin: 20px;
 }
-.show .show__left p {
+.show .show__casino p {
   font-weight: 400;
   font-size: 16px;
-  color: #111111;
   line-height: 19px;
 }
-.show .show__right button {
+.show .show__sort button {
   border: 1px solid #dddddd;
   border-radius: 6px;
   height: 32px;
@@ -529,11 +527,22 @@ body {
 }
 .dealer .dealer__background {
   flex-basis: 15%;
-  background-color: #161735;
   height: auto;
 }
 .dealer .dealer__background img {
   padding: 20px;
+}
+.dealer .dealer__background.dealer--black {
+  background-color: #161735;
+}
+.dealer .dealer__background.dealer--green {
+  background-color: #147b44;
+}
+.dealer .dealer__background.dealer--red {
+  background-color: #ae0001;
+}
+.dealer .dealer__background.dealer--blue {
+  background-color: #2a385b;
 }
 .dealer .dealer__content {
   display: flex;
@@ -675,6 +684,21 @@ body {
   top: -3px;
   left: 77px;
 }
+.dealer .dealer__content-body .gift__color-yellow {
+  border: 5px solid #f6bf31;
+}
+.dealer .dealer__content-body .gift__color-yellow p {
+  color: #0c1245;
+}
+.dealer .dealer__content-body .gift__color-yellow .apply {
+  color: #1E60E1;
+}
+.dealer .dealer__content-body .gift__color-yellow .gift-box {
+  background: #f6bf31;
+}
+.dealer .dealer__content-body .gift__color-yellow .sale-box {
+  background: #f6bf31;
+}
 .dealer .dealer__content_footer {
   display: flex;
   flex-direction: row;
@@ -753,699 +777,6 @@ body {
   line-height: 1.5;
 }
 
-.unibet {
-  display: flex;
-  margin: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.unibet .dealer__background {
-  flex-basis: 15%;
-  background-color: #147b44;
-  height: auto;
-}
-.unibet .dealer__background img {
-  padding: 20px;
-}
-.unibet .dealer__content {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 85%;
-  background-color: #ffffff;
-  height: auto;
-}
-.unibet .dealer__content-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e9ebee;
-}
-.unibet .dealer__content-header .dunder-title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 41px;
-  text-transform: uppercase;
-  padding: 10px;
-}
-.unibet .dealer__content-header .dunder-title span {
-  color: #1E60E1;
-}
-.unibet .dealer__content-header .dunder-right {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.unibet .dealer__content-header .dunder-right .featured-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #f7bf31;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.unibet .dealer__content-header .dunder-right .number-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #76c344;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.unibet .dealer__content-header .dunder-right .perfect {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.unibet .dealer__content-header .dunder-right .perfect span {
-  color: #76c344;
-  font-weight: 700;
-}
-.unibet .dealer__content-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.unibet .dealer__content-body .body__country {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-.unibet .dealer__content-body .body__country .country {
-  display: flex;
-  align-items: center;
-  line-height: 32px;
-  gap: 10px;
-}
-.unibet .dealer__content-body .body__desc {
-  padding: 16px;
-}
-.unibet .dealer__content-body .body__desc ul li {
-  color: #111111;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-}
-.unibet .dealer__content-body .body__gift {
-  max-width: 164px;
-  max-height: 149px;
-  width: 100%;
-  height: 100%;
-  border: 5px solid #f6bf31;
-  border-radius: 12px;
-  margin: auto 25px;
-  margin-top: 16px;
-  padding: 16px;
-  position: relative;
-}
-.unibet .dealer__content-body .body__gift p {
-  color: #f6bf31;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  font-weight: 700;
-  margin-top: 8px;
-}
-.unibet .dealer__content-body .body__gift .apply {
-  color: #1E60E1;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  margin-top: 18px;
-  cursor: pointer;
-}
-.unibet .dealer__content-body .body__gift .gift-box {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background: #f6bf31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: -24px;
-  top: 2px;
-}
-.unibet .dealer__content-body .body__gift .sale-box {
-  width: 80px;
-  height: 26px;
-  background: #f6bf31;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 0px 12px;
-  position: absolute;
-  top: -3px;
-  left: 77px;
-}
-.unibet .dealer__content_footer {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  padding-left: 16px;
-  padding-bottom: 16px;
-  margin-top: 10px;
-}
-.unibet .dealer__content_footer .visit-casino {
-  background: #1E60E1;
-  border-radius: 6px;
-  width: 196px;
-  height: 44px;
-  border: none;
-  color: #ffffff;
-  font-weight: 700;
-}
-.unibet .dealer__content_footer .visit-review {
-  width: 150px;
-  height: 44px;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  color: #1E60E1;
-}
-.unibet .dealer__content_footer .less-details {
-  width: 150px;
-  height: 44px;
-  font-weight: 700;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  color: #1E60E1;
-}
-.unibet .dealer__content-hidden {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 16px;
-  border-top: 1px solid #e9ebee;
-}
-.unibet .left-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.unibet .left-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.unibet .left-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-.unibet .right-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.unibet .right-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.unibet .right-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-
-.dafabet {
-  display: flex;
-  margin: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.dafabet .dealer__background {
-  flex-basis: 15%;
-  background-color: #ae0001;
-  height: auto;
-}
-.dafabet .dealer__background img {
-  padding: 20px;
-}
-.dafabet .dealer__content {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 85%;
-  background-color: #ffffff;
-  height: auto;
-}
-.dafabet .dealer__content-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e9ebee;
-}
-.dafabet .dealer__content-header .dunder-title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 41px;
-  text-transform: uppercase;
-  padding: 10px;
-}
-.dafabet .dealer__content-header .dunder-title span {
-  color: #1E60E1;
-}
-.dafabet .dealer__content-header .dunder-right {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.dafabet .dealer__content-header .dunder-right .featured-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #f7bf31;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.dafabet .dealer__content-header .dunder-right .number-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #76c344;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.dafabet .dealer__content-header .dunder-right .perfect {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.dafabet .dealer__content-header .dunder-right .perfect span {
-  color: #76c344;
-  font-weight: 700;
-}
-.dafabet .dealer__content-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.dafabet .dealer__content-body .body__country {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-.dafabet .dealer__content-body .body__country .country {
-  display: flex;
-  align-items: center;
-  line-height: 32px;
-  gap: 10px;
-}
-.dafabet .dealer__content-body .body__desc {
-  padding: 16px;
-}
-.dafabet .dealer__content-body .body__desc ul li {
-  color: #111111;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-}
-.dafabet .dealer__content-body .body__gift {
-  max-width: 164px;
-  max-height: 149px;
-  width: 100%;
-  height: 100%;
-  border: 5px solid #f6bf31;
-  border-radius: 12px;
-  margin: auto 25px;
-  margin-top: 16px;
-  padding: 16px;
-  position: relative;
-}
-.dafabet .dealer__content-body .body__gift p {
-  color: #f6bf31;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  font-weight: 700;
-  margin-top: 8px;
-}
-.dafabet .dealer__content-body .body__gift .apply {
-  color: #1E60E1;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  margin-top: 18px;
-  cursor: pointer;
-}
-.dafabet .dealer__content-body .body__gift .gift-box {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background: #f6bf31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: -24px;
-  top: 2px;
-}
-.dafabet .dealer__content-body .body__gift .sale-box {
-  width: 80px;
-  height: 26px;
-  background: #f6bf31;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 0px 12px;
-  position: absolute;
-  top: -3px;
-  left: 77px;
-}
-.dafabet .dealer__content_footer {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  padding-left: 16px;
-  padding-bottom: 16px;
-  margin-top: 10px;
-}
-.dafabet .dealer__content_footer .visit-casino {
-  background: #1E60E1;
-  border-radius: 6px;
-  width: 196px;
-  height: 44px;
-  border: none;
-  color: #ffffff;
-  font-weight: 700;
-}
-.dafabet .dealer__content_footer .visit-review {
-  width: 150px;
-  height: 44px;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  color: #1E60E1;
-}
-.dafabet .dealer__content_footer .less-details {
-  width: 150px;
-  height: 44px;
-  font-weight: 700;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  color: #1E60E1;
-}
-.dafabet .dealer__content-hidden {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 16px;
-  border-top: 1px solid #e9ebee;
-}
-.dafabet .left-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.dafabet .left-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.dafabet .left-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-.dafabet .right-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.dafabet .right-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.dafabet .right-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-
-.happystart {
-  display: flex;
-  margin: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.happystart .dealer__background {
-  flex-basis: 15%;
-  background-color: #2a385b;
-  height: auto;
-}
-.happystart .dealer__background img {
-  padding: 20px;
-}
-.happystart .dealer__content {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 85%;
-  background-color: #ffffff;
-  height: auto;
-}
-.happystart .dealer__content-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e9ebee;
-}
-.happystart .dealer__content-header .dunder-title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 41px;
-  text-transform: uppercase;
-  padding: 10px;
-}
-.happystart .dealer__content-header .dunder-title span {
-  color: #1E60E1;
-}
-.happystart .dealer__content-header .dunder-right {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.happystart .dealer__content-header .dunder-right .featured-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #f7bf31;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.happystart .dealer__content-header .dunder-right .number-right {
-  display: flex;
-  align-items: center;
-  border: none;
-  background: #76c344;
-  border-radius: 100px;
-  color: #ffffff;
-  padding: 5px 12px;
-  margin-right: 12px;
-}
-.happystart .dealer__content-header .dunder-right .perfect {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.happystart .dealer__content-header .dunder-right .perfect span {
-  color: #76c344;
-  font-weight: 700;
-}
-.happystart .dealer__content-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.happystart .dealer__content-body .body__country {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-.happystart .dealer__content-body .body__country .country {
-  display: flex;
-  align-items: center;
-  line-height: 32px;
-  gap: 10px;
-}
-.happystart .dealer__content-body .body__desc {
-  padding: 16px;
-}
-.happystart .dealer__content-body .body__desc ul li {
-  color: #111111;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-}
-.happystart .dealer__content-body .body__gift {
-  max-width: 164px;
-  max-height: 149px;
-  width: 100%;
-  height: 100%;
-  border: 5px solid #f6bf31;
-  border-radius: 12px;
-  margin: auto 25px;
-  margin-top: 16px;
-  padding: 16px;
-  position: relative;
-}
-.happystart .dealer__content-body .body__gift p {
-  color: #f6bf31;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  font-weight: 700;
-  margin-top: 8px;
-}
-.happystart .dealer__content-body .body__gift .apply {
-  color: #1E60E1;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  margin-top: 18px;
-  cursor: pointer;
-}
-.happystart .dealer__content-body .body__gift .gift-box {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background: #f6bf31;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: -24px;
-  top: 2px;
-}
-.happystart .dealer__content-body .body__gift .sale-box {
-  width: 80px;
-  height: 26px;
-  background: #f6bf31;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 0px 12px;
-  position: absolute;
-  top: -3px;
-  left: 77px;
-}
-.happystart .dealer__content_footer {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  padding-left: 16px;
-  padding-bottom: 16px;
-  margin-top: 10px;
-}
-.happystart .dealer__content_footer .visit-casino {
-  background: #1E60E1;
-  border-radius: 6px;
-  width: 196px;
-  height: 44px;
-  border: none;
-  color: #ffffff;
-  font-weight: 700;
-}
-.happystart .dealer__content_footer .visit-review {
-  width: 150px;
-  height: 44px;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  color: #1E60E1;
-}
-.happystart .dealer__content_footer .less-details {
-  width: 150px;
-  height: 44px;
-  font-weight: 700;
-  background: #edf2fd;
-  border: none;
-  border-radius: 6px;
-  color: #1E60E1;
-}
-.happystart .dealer__content-hidden {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 16px;
-  border-top: 1px solid #e9ebee;
-}
-.happystart .left-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.happystart .left-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.happystart .left-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-.happystart .right-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.happystart .right-desc p {
-  display: flex;
-  color: #111111;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.happystart .right-desc ul {
-  padding: 20px;
-  line-height: 1.5;
-}
-
 .btn-show {
   border: 1px solid #1E60E1;
   max-width: 398px;
@@ -1477,7 +808,7 @@ body {
 .pagination .pagination__pagesize .page-number {
   width: 36px;
   height: 36px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 6px;
   font-weight: 700;
   font-size: 16px;
@@ -1492,9 +823,9 @@ body {
 }
 .pagination .pagination__pagesize .active {
   background-color: #1E60E1;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.pagination .pagination__pageindex {
+.pagination .pagination__page-index {
   color: #111111;
   font-weight: 400;
   font-size: 16px;
@@ -1504,7 +835,7 @@ body {
 .description {
   display: flex;
   margin: 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   flex-direction: row;
   border-radius: 6px;
 }
@@ -1522,7 +853,12 @@ body {
 .description .description__word .desciption__line {
   margin-bottom: 25px;
 }
-.description .description__word .title-one, .description .description__word .title-two, .description .description__word .title-three, .description .description__word .title-foure, .description .description__word .title-five.title-six, .description .description__word .title-seven {
+.description .description__word .title-one,
+.description .description__word .title-two,
+.description .description__word .title-three,
+.description .description__word .title-foure,
+.description .description__word .title-five.title-six,
+.description .description__word .title-seven {
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -1534,7 +870,7 @@ body {
 .description .description__word .note {
   display: flex;
   border: none;
-  background: #F2F3F5;
+  background: #f2f3f5;
   border-radius: 6px;
 }
 .description .description__word .note img {
@@ -1589,7 +925,7 @@ body {
 .description .description__word .question {
   display: flex;
   flex-direction: column;
-  border: 1px solid #F8F8F8;
+  border: 1px solid #f8f8f8;
   border-radius: 6px;
   margin-top: 10px;
 }
@@ -1597,7 +933,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #F8F8F8;
+  background: #f8f8f8;
   font-weight: 700;
 }
 .description .description__word .question .question__header i {
@@ -1628,7 +964,7 @@ body {
   max-height: 192px;
   width: 100%;
   height: 100%;
-  background: #F2F3F5;
+  background: #f2f3f5;
   border-radius: 6px;
   position: sticky;
   top: 10px;
@@ -1691,13 +1027,13 @@ body {
 }
 
 @media (max-width: 400px) {
-  .sidebar.close .nav-links li .sub-menu {
+  .sidebar.sidebar--close .nav-links li .sub-menu {
     display: none;
   }
   .sidebar {
     width: 78px;
   }
-  .sidebar.close {
+  .sidebar.sidebar--close {
     width: 0;
   }
   .home-section {
@@ -1705,7 +1041,7 @@ body {
     width: calc(100% - 78px);
     z-index: 100;
   }
-  .sidebar.close ~ .home-section {
+  .sidebar.sidebar--close ~ .home-section {
     width: 100%;
     left: 0;
   }

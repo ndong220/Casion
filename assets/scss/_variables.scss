@@ -8,11 +8,34 @@ p {
     color : $textColor;
     line-height: 24px;
     font-size: $font-base;
+    word-break: break-word;
     
 }
 button {
     cursor: pointer;
 }
-.pl-10 {
-    padding-left: 10px;
-}
+
+// break points
+$break-point-375: 375px;
+$break-point-600: 600px;
+$break-point-768: 768px;
+$break-point-992: 992px;
+$break-point-1024: 1024px;
+$break-point-1200: 1200px;
+
+$media-screen-mobile-small: '(max-width: #{$break-point-375 - 1})';
+$media-screen-mobile-normal: '(max-width: #{$break-point-600 - 1})';
+$media-screen-mobile: '(max-width: #{$break-point-768 - 1})';
+$media-screen-sm-mobile: '(min-width: #{$break-point-600}) and (max-width: #{$break-point-768})';
+$media-screen-tablet: '(min-width: #{$break-point-768}) and (max-width: #{$break-point-992 - 1})';
+$media-screen-desktop: '(min-width: #{$break-point-992}) and (max-width: #{$break-point-1200})';
+
+$media-xs: '(max-width: #{$break-point-600 - 1})';
+$media-sm: '(min-width: #{$break-point-600})';
+$media-md: '(min-width: #{$break-point-768})';
+$media-lg: '(min-width: #{$break-point-992})';
+$media-xl: '(min-width: #{$break-point-1200})';
+
+$full-screen-min-height: 700px;
+$media-min-full-screen-height: '(max-height: #{$full-screen-min-height - 1})';
+

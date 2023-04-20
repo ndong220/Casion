@@ -26,27 +26,27 @@
     <title>Casino</title>
   </head>
   <body>
-    <div class="sidebar close">
+    <!-- Begin sidebar Casino -->
+    <div class="sidebar sidebar--close">
       <div class="logo-details">
-        <span class="logo_name"
-          ><img src="./assets/images/logo-playunited.png" alt=""
-        /></span>
+        <span class="logo_name">
+          <img src="./assets/images/logo-playunited.png" alt=""/></span>
       </div>
       <ul class="nav-links">
         <li>
-          <div class="iocn-link">
+          <div class="icon-link">
             <a href="#">
               <img
                 src="./assets/icons/casino-add-chip.svg"
                 alt=""
-                class="iocn__img"
+                class="icon-link__img"
               />
-              <span class="link_name">Online Casinos</span>
+              <span class="icon-link__name">Online Casinos</span>
             </a>
             <i class="bx bxs-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
-            <li><a class="link_name" href="#">Online Casinos</a></li>
+            <li><a class="icon-link__name" href="#">Online Casinos</a></li>
             <li><a href="#">Top online casinos</a></li>
             <li><a href="#">Newly opened casinos</a></li>
             <li><a href="#">Big Brands</a></li>
@@ -54,19 +54,19 @@
           </ul>
         </li>
         <li>
-          <div class="iocn-link">
+          <div class="icon-link">
             <a href="#">
               <img
                 src="./assets/icons/casion-diamond-bounus.svg"
                 alt=""
-                class="iocn__img"
+                class="icon-link__img"
               />
-              <span class="link_name">Bonuses</span>
+              <span class="icon-link__name">Bonuses</span>
             </a>
             <i class="bx bxs-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
-            <li><a class="link_name" href="#">Bonuses</a></li>
+            <li><a class="icon-link__name" href="#">Bonuses</a></li>
             <li><a href="#">No Deposit Bonuses </a></li>
             <li><a href="#">Deposit Bonuses</a></li>
             <li><a href="#">Reload Bonuses</a></li>
@@ -75,19 +75,19 @@
           </ul>
         </li>
         <li>
-          <div class="iocn-link">
+          <div class="icon-link">
             <a href="#">
               <img
                 src="./assets/icons/board-game.svg"
                 alt=""
-                class="iocn__img"
+                class="icon-link__img"
               />
-              <span class="link_name">Games</span>
+              <span class="icon-link__name">Games</span>
             </a>
             <i class="bx bxs-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
-            <li><a class="link_name" href="#">Games</a></li>
+            <li><a class="icon-link__name" href="#">Games</a></li>
             <li><a href="#">Web Design</a></li>
             <li><a href="#">Login Form</a></li>
             <li><a href="#">Card Design</a></li>
@@ -98,42 +98,52 @@
             <img
               src="./assets/icons/blog-blogger.svg"
               alt=""
-              class="iocn__img"
+              class="icon-link__img"
             />
-            <span class="link_name">Blog</span>
+            <span class="icon-link__name">Blog</span>
           </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Slots</a></li>
-            <li><a class="link_name" href="#">Roulette</a></li>
-            <li><a class="link_name" href="#">Video poker</a></li>
-            <li><a class="link_name" href="#">Blackjack</a></li>
-            <li><a class="link_name" href="#">Scratch cards</a></li>
-            <li><a class="link_name" href="#">All Games</a></li>
+          <ul class="sub-menu sub-menu--blank">
+            <li><a class="icon-link__name" href="#">Slots</a></li>
+            <li><a class="icon-link__name" href="#">Roulette</a></li>
+            <li><a class="icon-link__name" href="#">Video poker</a></li>
+            <li><a class="icon-link__name" href="#">Blackjack</a></li>
+            <li><a class="icon-link__name" href="#">Scratch cards</a></li>
+            <li><a class="icon-link__name" href="#">All Games</a></li>
           </ul>
         </li>
       </ul>
     </div>
-    <div class="home-section">
-      <div class="home-content">
-        <i class="bx bx-menu" style="color: #1e60e1"></i>
+    <!-- End sidebar Casion -->
+
+    <!-- Begin primary content -->
+    <section class="home-section">
+
+      <!-- Begin home-header -->
+      <div class="home-header">
+        <i class="bx bx-menu"></i>
         <div class="breadcrumbs">
           <a href="#">PlayUnited.com</a>
           <span>></span>
           <a href="#">Casinos</a>
         </div>
-        <div class="home-content__icons">
-          <div class="home-content__language">
+        <div class="home-header__icons">
+          <div class="home-header__language">
             <img
               src="./assets/icons/USA.svg"
               alt=""
-              class="bx home-content__icon--right"
+              class="bx home-header__icon--right"
             />
-            <span class="home-content__text">EN</span>
-            <i class="fa-solid fa-caret-down"></i>
+            
+            <select class="home-header__select-nation">
+              <option value="en">EN</option>
+              <option value="vn">VN</option>
+            </select>
           </div>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass home-content__search " title="tìm kiếm"></i>
         </div>
       </div>
+      <!-- End home-header -->
+
 
       <!--Begin Title -->
       <div class="title">
@@ -143,8 +153,7 @@
       </div>
       <!-- End Title -->
 
-      <!-- tab nav -->
-      <div>
+      <!--Begin tab nav -->
         <!-- Tab items -->
         <div class="tabs">
           <div class="tab-item active">Recommended (342)</div>
@@ -153,7 +162,6 @@
           <div class="tab-item">Newly Opnened (193)</div>
           <div class="line"></div>
         </div>
-
         <!-- Tab content -->
         <div class="tab-content">
           <div class="tab__show fadeout">
@@ -227,47 +235,48 @@
             </button>
           </div>
         </div>
-      </div>
       <!-- end tab nav -->
 
-      <div class="setting">
-        <div class="setting__left">
-          <div class="setting-desc">
+
+      <!-- Begin filter -->
+      <div class="filter">
+        <div class="filter__left">
+          <div class="filter__desc">
             Active filters: Casino Accepts Players from:
             <span>Canada <i class="fa-solid fa-xmark"></i></span>
           </div>
-          <div class="setting-game">
-            Casino Games: <span>Canada <i class="fa-solid fa-xmark"></i></span>
+          <div class="filter__game">
+            Casino Games: <span class="filter__tag">Canada <i class="fa-solid fa-xmark"></i></span>
           </div>
-          <div class="btn-reset">Reset filters</div>
+          <div class="filter__reset-btn">Reset filters</div>
         </div>
-        <div class="setting__right">
-          <div class="setting__right-btn">
+        <div class="filter__right">
+          <div class="filter__right-btn">
             <img src="./assets/icons/setting.svg" alt="" />
             Fillter (2)
           </div>
         </div>
       </div>
+      <!-- End Filter -->
 
       <!-- showing casino -->
       <div class="show">
-        <div class="show__left">
-          <p>
-            Showing casinos: Accepting players from Greece with Reputation
-            rating above 7.5
+        <div class="show__casino">
+          <p class="show__text">
+            Showing casinos: Accepting players from Greece with Reputation rating above 7.5
           </p>
         </div>
-        <div class="show__right">
-          <button class="show__right-button">
-            <span>Sort: </span>Recommended
+        <div class="show__sort">
+          <button class="show__sort-button">
+            <span class="show__sort-text">Sort: </span>Recommended
           </button>
         </div>
       </div>
       <!-- end showing casino -->
 
-      <!-- Dealer -->
+      <!--Begin DUNDER CASINO -->
       <div class="dealer">
-        <div class="dealer__background">
+        <div class="dealer__background dealer--black">
           <img src="./assets/images/live-casin-house.png" alt="img" />
         </div>
         <div class="dealer__content">
@@ -358,9 +367,11 @@
           </div>
         </div>
       </div>
+      <!-- End DUNDER CASINO -->
 
-      <div class="unibet">
-        <div class="dealer__background">
+      <!-- Begin #2 - Unibet Casino -->
+      <div class="dealer">
+        <div class="dealer__background dealer--green">
           <img src="./assets/images/unibet.png" alt="img" />
         </div>
         <div class="dealer__content">
@@ -406,7 +417,7 @@
                 <li>VPN Not Allowed</li>
               </ul>
             </div>
-            <div class="body__gift">
+            <div class="body__gift gift__color-yellow">
               <div class="gift-box">
                 <img src="./assets/icons/gift-box.svg" alt="" />
               </div>
@@ -451,9 +462,11 @@
           </div>
         </div>
       </div>
+      <!-- End #2 - Unibet Casino -->
 
-      <div class="dafabet">
-        <div class="dealer__background">
+      <!--Begin #3 - dafabet -->
+      <div class="dealer">
+        <div class="dealer__background dealer--red">
           <img src="./assets/images/dafabet.png" alt="img" />
         </div>
         <div class="dealer__content">
@@ -499,7 +512,7 @@
                 <li>VPN Not Allowed</li>
               </ul>
             </div>
-            <div class="body__gift">
+            <div class="body__gift gift__color-yellow">
               <div class="gift-box">
                 <img src="./assets/icons/gift-box.svg" alt="" />
               </div>
@@ -544,9 +557,11 @@
           </div>
         </div>
       </div>
+      <!-- End #3 - dafabet -->
 
-      <div class="happystart">
-        <div class="dealer__background">
+      <!-- Begin #4 - happistar -->
+      <div class="dealer">
+        <div class="dealer__background dealer--blue">
           <img src="./assets/images/happiStart.png" alt="img" />
         </div>
         <div class="dealer__content">
@@ -592,12 +607,12 @@
                 <li>VPN Not Allowed</li>
               </ul>
             </div>
-            <div class="body__gift">
+            <div class="body__gift gift__color-yellow">
               <div class="gift-box">
                 <img src="./assets/icons/gift-box.svg" alt="" />
               </div>
               <div class="sale-box">Exclusive</div>
-              <p>121% up to $500 and 200 extra spins</p>
+              <p>121% up to $500 and 200 extra spins, On Game Reel and other games</p>
               <div class="apply">T&C’s Apply</div>
             </div>
           </div>
@@ -637,7 +652,8 @@
           </div>
         </div>
       </div>
-      <!-- End Dealer -->
+      <!-- End #4 - happistar -->
+
       <!-- pagination -->
       <div class="btn-show">Show 18 more</div>
       <div class="pagination">
@@ -653,7 +669,7 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
-        <div class="pagination__pageindex">
+        <div class="pagination__page-index">
           <p>Showing results 1 - 18 of 4926</p>
         </div>
       </div>
@@ -1116,7 +1132,8 @@
           />
         </div>
       </footer>
-    </div>
+    </section>
+    <!-- End primary content -->
     <script src="./app.js"></script>
   </body>
 </html>
