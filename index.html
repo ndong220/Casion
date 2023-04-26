@@ -1,1139 +1,1242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/scss/main.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Casino</title>
-  </head>
-  <body>
-    <!-- Begin sidebar Casino -->
-    <div class="sidebar sidebar--close">
-      <div class="logo-details">
-        <span class="logo_name">
-          <img src="./assets/images/logo-playunited.png" alt=""/></span>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <div class="icon-link">
-            <a href="#">
-              <img
-                src="./assets/icons/casino-add-chip.svg"
-                alt=""
-                class="icon-link__img"
-              />
-              <span class="icon-link__name">Online Casinos</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="icon-link__name" href="#">Online Casinos</a></li>
-            <li><a href="#">Top online casinos</a></li>
-            <li><a href="#">Newly opened casinos</a></li>
-            <li><a href="#">Big Brands</a></li>
-            <li><a href="#">All Casinos</a></li>
-          </ul>
-        </li>
-        <li>
-          <div class="icon-link">
-            <a href="#">
-              <img
-                src="./assets/icons/casion-diamond-bounus.svg"
-                alt=""
-                class="icon-link__img"
-              />
-              <span class="icon-link__name">Bonuses</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="icon-link__name" href="#">Bonuses</a></li>
-            <li><a href="#">No Deposit Bonuses </a></li>
-            <li><a href="#">Deposit Bonuses</a></li>
-            <li><a href="#">Reload Bonuses</a></li>
-            <li><a href="#">Cashback Bonuses </a></li>
-            <li><a href="#">All Bonuses</a></li>
-          </ul>
-        </li>
-        <li>
-          <div class="icon-link">
-            <a href="#">
-              <img
-                src="./assets/icons/board-game.svg"
-                alt=""
-                class="icon-link__img"
-              />
-              <span class="icon-link__name">Games</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="icon-link__name" href="#">Games</a></li>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Login Form</a></li>
-            <li><a href="#">Card Design</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img
-              src="./assets/icons/blog-blogger.svg"
-              alt=""
-              class="icon-link__img"
-            />
-            <span class="icon-link__name">Blog</span>
-          </a>
-          <ul class="sub-menu sub-menu--blank">
-            <li><a class="icon-link__name" href="#">Slots</a></li>
-            <li><a class="icon-link__name" href="#">Roulette</a></li>
-            <li><a class="icon-link__name" href="#">Video poker</a></li>
-            <li><a class="icon-link__name" href="#">Blackjack</a></li>
-            <li><a class="icon-link__name" href="#">Scratch cards</a></li>
-            <li><a class="icon-link__name" href="#">All Games</a></li>
-          </ul>
-        </li>
-      </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/scss/main.css" />
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Casino</title>
+</head>
+
+<body>
+  <!-- Begin sidebar Casino -->
+  <div class="sidebar sidebar--close">
+    <div class="sidebar__logo logo-details">
+      <span class="sidebar__logo-name logo_name">
+        <img src="./assets/images/logo-playunited.png" alt="" /></span>
     </div>
-    <!-- End sidebar Casion -->
-
-    <!-- Begin primary content -->
-    <section class="home-section">
-
-      <!-- Begin home-header -->
-      <div class="home-header">
-        <i class="bx bx-menu"></i>
-        <div class="breadcrumbs">
-          <a href="#">PlayUnited.com</a>
-          <span>></span>
-          <a href="#">Casinos</a>
+    <ul class="sidebar__links nav-links">
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <img src="./assets/icons/casino-add-chip.svg" alt="" class="icon-link__img" />
+            <span class="icon-link__name">Online Casinos</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
         </div>
-        <div class="home-header__icons">
-          <div class="home-header__language">
-            <img
-              src="./assets/icons/USA.svg"
-              alt=""
-              class="bx home-header__icon--right"
-            />
-            
-            <select class="home-header__select-nation">
-              <option value="en">EN</option>
-              <option value="vn">VN</option>
-            </select>
-          </div>
-          <i class="fa-solid fa-magnifying-glass home-content__search " title="tìm kiếm"></i>
+        <ul class="sub-menu">
+          <li><a class="icon-link__name" href="#">Online Casinos</a></li>
+          <li><a href="#">Top online casinos</a></li>
+          <li><a href="#">Newly opened casinos</a></li>
+          <li><a href="#">Big Brands</a></li>
+          <li><a href="#">All Casinos</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <img src="./assets/icons/casion-diamond-bounus.svg" alt="" class="icon-link__img" />
+            <span class="icon-link__name">Bonuses</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
         </div>
+        <ul class="sub-menu">
+          <li><a class="icon-link__name" href="#">Bonuses</a></li>
+          <li><a href="#">No Deposit Bonuses </a></li>
+          <li><a href="#">Deposit Bonuses</a></li>
+          <li><a href="#">Reload Bonuses</a></li>
+          <li><a href="#">Cashback Bonuses </a></li>
+          <li><a href="#">All Bonuses</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <img src="./assets/icons/board-game.svg" alt="" class="icon-link__img" />
+            <span class="icon-link__name">Games</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="icon-link__name" href="#">Games</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/icons/blog-blogger.svg" alt="" class="icon-link__img" />
+          <span class="icon-link__name">Blog</span>
+        </a>
+        <ul class="sub-menu sub-menu--blank">
+          <li><a class="icon-link__name" href="#">Slots</a></li>
+          <li><a class="icon-link__name" href="#">Roulette</a></li>
+          <li><a class="icon-link__name" href="#">Video poker</a></li>
+          <li><a class="icon-link__name" href="#">Blackjack</a></li>
+          <li><a class="icon-link__name" href="#">Scratch cards</a></li>
+          <li><a class="icon-link__name" href="#">All Games</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- End sidebar Casion -->
+
+  <!-- Begin primary content -->
+
+  <section class="home-section">
+    <!-- Begin home-header -->
+    <div class="home-header">
+      <i class="bx bx-menu"></i>
+      <img src="./assets/images/iPad Mini/image.png" alt="" class="home-header__logo" />
+      <div class="breadcrumbs">
+        <a href="#">PlayUnited.com</a>
+        <span>></span>
+        <a href="#">Casinos</a>
       </div>
-      <!-- End home-header -->
+      <div class="home-header__icons">
+        <div class="home-header__language">
+          <img src="./assets/icons/USA.svg" alt="" class="bx home-header__icon--right" />
 
-
-      <!--Begin Title -->
-      <div class="title">
-        <div class="title__text">
-          Recommend for you:<span class="title__text--span"> 573 casinos</span>
+          <select class="home-header__select-nation">
+            <option value="en">EN</option>
+            <option value="vn">VN</option>
+          </select>
         </div>
+        <i class="fa-solid fa-magnifying-glass home-content__search" title="tìm kiếm"></i>
       </div>
-      <!-- End Title -->
+    </div>
+    <div class="breadcrumbs-ipad">
+      <a href="#">PlayUnited.com</a>
+      <span>></span>
+      <a href="#">Casinos</a>
+    </div>
+    <!-- End home-header -->
 
-      <!--Begin tab nav -->
-        <!-- Tab items -->
-        <div class="tabs">
-          <div class="tab-item active">Recommended (342)</div>
-          <div class="tab-item">Big Brands (132)</div>
-          <div class="tab-item">Newly Opnened (193)</div>
-          <div class="tab-item">Newly Opnened (193)</div>
-          <div class="line"></div>
-        </div>
-        <!-- Tab content -->
-        <div class="tab-content">
-          <div class="tab__show fadeout">
-            <div class="tab-pane active">
-              <h2>Recommended (342)</h2>
-              <p>
-                We've thoroughly reviewed Wazamba Casino and gave it a good
-                reputation rating. It's generally a good casino to play at, but
-                there are some things worth noting. In our review, we've
-                considered the casino's player complaints, estimated revenues,
-                license, games genuineness, customer support quality, fairness
-                of terms and conditions, withdrawal and win limits, and other
-                factors. Because Wazamba Casino is related to other online
-                casinos listed n limits, and other factors. Because Wazamba
-                Casino is related to other online casinos listed below, its
-                rating is also influenced by them. Read
-              </p>
-            </div>
-            <div class="tab-pane">
-              <h2>Big Brands (132)</h2>
-              <p>
-                We've thoroughly reviewed Wazamba Casino and gave it a good
-                reputation rating. It's generally a good casino to play at, but
-                there are some things worth noting. In our review, we've
-                considered the casino's player complaints, estimated revenues,
-                license, games genuineness, customer support quality, fairness
-                of terms and conditions, withdrawal and win limits, and other
-                factors. Because Wazamba Casino is related to other online
-                casinos listed n limits, and other factors. Because Wazamba
-                Casino is related to other online casinos listed below, its
-                rating is also influenced by them. Read
-              </p>
-            </div>
-            <div class="tab-pane">
-              <h2>Newly Opnened (193)</h2>
-              <p>
-                We've thoroughly reviewed Wazamba Casino and gave it a good
-                reputation rating. It's generally a good casino to play at, but
-                there are some things worth noting. In our review, we've
-                considered the casino's player complaints, estimated revenues,
-                license, games genuineness, customer support quality, fairness
-                of terms and conditions, withdrawal and win limits, and other
-                factors. Because Wazamba Casino is related to other online
-                casinos listed n limits, and other factors. Because Wazamba
-                Casino is related to other online casinos listed below, its
-                rating is also influenced by them. Read
-              </p>
-            </div>
-            <div class="tab-pane">
-              <h2>All (1982)</h2>
-              <p>
-                We've thoroughly reviewed Wazamba Casino and gave it a good
-                reputation rating. It's generally a good casino to play at, but
-                there are some things worth noting. In our review, we've
-                considered the casino's player complaints, estimated revenues,
-                license, games genuineness, customer support quality, fairness
-                of terms and conditions, withdrawal and win limits, and other
-                factors. Because Wazamba Casino is related to other online
-                casinos listed n limits, and other factors. Because Wazamba
-                Casino is related to other online casinos listed below, its
-                rating is also influenced by them. Read
-              </p>
-            </div>
-          </div>
-          <div class="toggle">
-            <button class="expand-btn">
-              Show more <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <button class="collapse-btn">
-              Show less <i class="fa-solid fa-chevron-up"></i>
-            </button>
-          </div>
-        </div>
-      <!-- end tab nav -->
-
-
-      <!-- Begin filter -->
-      <div class="filter">
-        <div class="filter__left">
-          <div class="filter__desc">
-            Active filters: Casino Accepts Players from:
-            <span>Canada <i class="fa-solid fa-xmark"></i></span>
-          </div>
-          <div class="filter__game">
-            Casino Games: <span class="filter__tag">Canada <i class="fa-solid fa-xmark"></i></span>
-          </div>
-          <div class="filter__reset-btn">Reset filters</div>
-        </div>
-        <div class="filter__right">
-          <div class="filter__right-btn">
-            <img src="./assets/icons/setting.svg" alt="" />
-            Fillter (2)
-          </div>
-        </div>
+    <!--Begin Title -->
+    <div class="title">
+      <div class="title__text">
+        Recommend for you:<span class="title__text--total"> 573 casinos</span>
       </div>
-      <!-- End Filter -->
+    </div>
+    <!-- End Title -->
 
-      <!-- showing casino -->
-      <div class="show">
-        <div class="show__casino">
-          <p class="show__text">
-            Showing casinos: Accepting players from Greece with Reputation rating above 7.5
+    <!--Begin tab nav -->
+    <!-- Tab items -->
+
+    <div class="tabs">
+      <div class="tabs__scroll">
+        <div class="tab-item active">Recommended (342)</div>
+        <div class="tab-item">Big Brands (132)</div>
+        <div class="tab-item">Newly Opnened (193)</div>
+        <div class="tab-item">All (1982)</div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <!-- Tab content -->
+    <div class="tab-content">
+      <div class="tab__show fadeout">
+        <div class="tab-pane active">
+          <h2>Recommended (342)</h2>
+          <p>
+            We've thoroughly reviewed Wazamba Casino and gave it a good
+            reputation rating. It's generally a good casino to play at, but
+            there are some things worth noting. In our review, we've
+            considered the casino's player complaints, estimated revenues,
+            license, games genuineness, customer support quality, fairness of
+            terms and conditions, withdrawal and win limits, and other
+            factors. Because Wazamba Casino is related to other online casinos
+            listed n limits, and other factors. Because Wazamba Casino is
+            related to other online casinos listed below, its rating is also
+            influenced by them. Read
           </p>
         </div>
-        <div class="show__sort">
-          <button class="show__sort-button">
-            <span class="show__sort-text">Sort: </span>Recommended
+        <div class="tab-pane">
+          <h2>Big Brands (132)</h2>
+          <p>
+            We've thoroughly reviewed Wazamba Casino and gave it a good
+            reputation rating. It's generally a good casino to play at, but
+            there are some things worth noting. In our review, we've
+            considered the casino's player complaints, estimated revenues,
+            license, games genuineness, customer support quality, fairness of
+            terms and conditions, withdrawal and win limits, and other
+            factors. Because Wazamba Casino is related to other online casinos
+            listed n limits, and other factors. Because Wazamba Casino is
+            related to other online casinos listed below, its rating is also
+            influenced by them. Read
+          </p>
+        </div>
+        <div class="tab-pane">
+          <h2>Newly Opnened (193)</h2>
+          <p>
+            We've thoroughly reviewed Wazamba Casino and gave it a good
+            reputation rating. It's generally a good casino to play at, but
+            there are some things worth noting. In our review, we've
+            considered the casino's player complaints, estimated revenues,
+            license, games genuineness, customer support quality, fairness of
+            terms and conditions, withdrawal and win limits, and other
+            factors. Because Wazamba Casino is related to other online casinos
+            listed n limits, and other factors. Because Wazamba Casino is
+            related to other online casinos listed below, its rating is also
+            influenced by them. Read
+          </p>
+        </div>
+        <div class="tab-pane">
+          <h2>All (1982)</h2>
+          <p>
+            We've thoroughly reviewed Wazamba Casino and gave it a good
+            reputation rating. It's generally a good casino to play at, but
+            there are some things worth noting. In our review, we've
+            considered the casino's player complaints, estimated revenues,
+            license, games genuineness, customer support quality, fairness of
+            terms and conditions, withdrawal and win limits, and other
+            factors. Because Wazamba Casino is related to other online casinos
+            listed n limits, and other factors. Because Wazamba Casino is
+            related to other online casinos listed below, its rating is also
+            influenced by them. Read
+          </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <button class="expand-btn">
+          Show more <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button class="collapse-btn">
+          Show less <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
+    </div>
+    <!-- end tab nav -->
+
+    <!-- Begin filter -->
+    <div class="filter">
+      <div class="filter__left">
+        <div class="filter__desc">
+          Active filters: Casino Accepts Players from:
+          <span>Canada <i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="filter__game">
+          Casino Games:
+          <span class="filter__tag">Slots <i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="filter__reset-btn">Reset filters</div>
+      </div>
+      <div class="filter__right">
+        <div class="filter__right-btn">
+          <img src="./assets/icons/setting.svg" alt="" />
+          Fillter (2)
+        </div>
+      </div>
+    </div>
+    <!-- End Filter -->
+
+    <!-- showing casino -->
+    <div class="show">
+      <div class="show__casino">
+        <p class="show__text">
+          Showing casinos: Accepting players from Greece with Reputation
+          rating above 7.5
+        </p>
+      </div>
+      <div class="show__sort">
+        <button class="show__sort-button">
+          <span class="show__sort-text">Sort: </span>Recommended
+        </button>
+      </div>
+    </div>
+    <!-- end showing casino -->
+
+    <!--Begin DUNDER CASINO -->
+    <div class="dealer dunder">
+      <div class="dealer__background dealer--black">
+        <img src="./assets/images/live-casin-house.png" alt="img" />
+      </div>
+      <div class="dealer__content">
+        <div class="dealer__content-header">
+          <div class="dunder-title">
+            <img src="./assets/images/small-casino.png" alt="img" class="dunder__content-img" />
+            <span>#1</span>- dunder CASINO
+          </div>
+          <img src="./assets/icons/star-yellow.svg" alt="" class="ratting" />
+          <div class="dunder-right">
+            <button class="featured-right">
+              <img class="mr-5" src="./assets/icons/star-ratting.svg" alt="" />
+              Featured
+            </button>
+            <button class="number-right">
+              <img class="mr-5" src="./assets/icons/ribon.svg" alt="" />
+              9.33/10
+            </button>
+            <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
+            &nbsp;<img src="./assets/icons/alert.svg" alt="" class="alert" />
+          </div>
+        </div>
+
+        <div class="dealer__content-body">
+          <div class="body__country">
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/VietNam.svg" alt="" /> Players from
+              Greece
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" /> English website
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" />English customer
+              support
+            </div>
+            <div class="country">
+              <img src="./assets/icons/small-remove.svg" alt="" />
+              <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
+            </div>
+          </div>
+          <div class="body__desc">
+            <ul>
+              <li>34 Game Providers</li>
+              <li>12 Payment Methods</li>
+              <li>Gaming License</li>
+              <li>VPN Not Allowed</li>
+            </ul>
+          </div>
+          <div class="body__gift">
+            <div class="gift-box">
+              <img src="./assets/icons/gift-box.svg" alt="" />
+            </div>
+            <div class="sale-box">Exclusive</div>
+            <p>121% up to $500 and 200 extra spins</p>
+            <div class="apply">T&C’s Apply</div>
+          </div>
+        </div>
+        <div class="dealer__content_footer">
+          <button class="visit-casino"></button>
+          <button class="visit-review">Review</button>
+          <button onclick="toggleViewAll()" class="less-details">
+            Less Details <i class="fa-solid fa-chevron-down"></i>
           </button>
         </div>
-      </div>
-      <!-- end showing casino -->
-
-      <!--Begin DUNDER CASINO -->
-      <div class="dealer">
-        <div class="dealer__background dealer--black">
-          <img src="./assets/images/live-casin-house.png" alt="img" />
-        </div>
-        <div class="dealer__content">
-          <div class="dealer__content-header">
-            <div class="dunder-title"><span>#1</span>- dunder CASINO</div>
-            <div class="dunder-right">
-              <button class="featured-right">
-                <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
-              </button>
-              <button class="number-right">
-                <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
-              </button>
-              <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-              &nbsp;<img src="./assets/icons/alert.svg" alt="" />
-            </div>
-          </div>
-          <div class="dealer__content-body">
-            <div class="body__country">
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/VietNam.svg" alt="" /> Players from
-                Greece
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" /> English website
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" />English customer
-                support
-              </div>
-              <div class="country">
-                <img src="./assets/icons/small-remove.svg" alt="" />
-                <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
-              </div>
-            </div>
-            <div class="body__desc">
-              <ul>
-                <li>34 Game Providers</li>
-                <li>12 Payment Methods</li>
-                <li>Gaming License</li>
-                <li>VPN Not Allowed</li>
-              </ul>
-            </div>
-            <div class="body__gift">
-              <div class="gift-box">
-                <img src="./assets/icons/gift-box.svg" alt="" />
-              </div>
-              <div class="sale-box">Exclusive</div>
-              <p>121% up to $500 and 200 extra spins</p>
-              <div class="apply">T&C’s Apply</div>
-            </div>
-          </div>
-          <div class="dealer__content_footer">
-            <button class="visit-casino">Visit Casino</button>
-            <button class="visit-review">Review</button>
-            <button onclick="toggleViewAll()" class="less-details">
-              Less Details <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="dealer__content-hidden">
-            <div class="left-desc">
-              <p>
-                <img src="./assets/icons/iicon.svg" alt="" /> Why play here?
-              </p>
-              <ul>
-                <li>Large selection of games from multiple suppliers</li>
-                <li>Mobile & live casino supported</li>
-                <li>24/7 support via live chat and email</li>
-                <li>Licensed in UK</li>
-                <li>Large online progressive slots</li>
-              </ul>
-            </div>
-            <div class="right-desc">
-              <p>
-                <img src="./assets/icons/giftblue.svg" alt="" /> Bonus Details
-              </p>
-              <ul>
-                <li>Maximum First Deposit Bonus: up to $50</li>
-                <li>Bonus Match: 200% match on first deposit</li>
-                <li>Minimum Deposit Amount: $20</li>
-                <li>Wager Requirement: 25 Times</li>
-                <li>Bonus Excluded in Wager Requirement: No</li>
-                <li>No Deposit Bonus: +$20 Free Spins</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End DUNDER CASINO -->
-
-      <!-- Begin #2 - Unibet Casino -->
-      <div class="dealer">
-        <div class="dealer__background dealer--green">
-          <img src="./assets/images/unibet.png" alt="img" />
-        </div>
-        <div class="dealer__content">
-          <div class="dealer__content-header">
-            <div class="dunder-title"><span>#2</span>- Unibet Casino</div>
-            <div class="dunder-right">
-              <button class="featured-right">
-                <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
-              </button>
-              <button class="number-right">
-                <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
-              </button>
-              <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-              &nbsp;<img src="./assets/icons/alert.svg" alt="" />
-            </div>
-          </div>
-          <div class="dealer__content-body">
-            <div class="body__country">
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/VietNam.svg" alt="" /> Players from
-                Greece
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" /> English website
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" />English customer
-                support
-              </div>
-              <div class="country">
-                <img src="./assets/icons/small-remove.svg" alt="" />
-                <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
-              </div>
-            </div>
-            <div class="body__desc">
-              <ul>
-                <li>34 Game Providers</li>
-                <li>12 Payment Methods</li>
-                <li>Gaming License</li>
-                <li>VPN Not Allowed</li>
-              </ul>
-            </div>
-            <div class="body__gift gift__color-yellow">
-              <div class="gift-box">
-                <img src="./assets/icons/gift-box.svg" alt="" />
-              </div>
-              <div class="sale-box">Exclusive</div>
-              <p>121% up to $500 and 200 extra spins</p>
-              <div class="apply">T&C’s Apply</div>
-            </div>
-          </div>
-          <div class="dealer__content_footer">
-            <button class="visit-casino">Visit Casino</button>
-            <button class="visit-review">Review</button>
-            <button onclick="toggleViewAll()" class="less-details">
-              Less Details <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="dealer__content-hidden">
-            <div class="left-desc">
-              <p>
-                <img src="./assets/icons/iicon.svg" alt="" /> Why play here?
-              </p>
-              <ul>
-                <li>Large selection of games from multiple suppliers</li>
-                <li>Mobile & live casino supported</li>
-                <li>24/7 support via live chat and email</li>
-                <li>Licensed in UK</li>
-                <li>Large online progressive slots</li>
-              </ul>
-            </div>
-            <div class="right-desc">
-              <p>
-                <img src="./assets/icons/giftblue.svg" alt="" /> Bonus Details
-              </p>
-              <ul>
-                <li>Maximum First Deposit Bonus: up to $50</li>
-                <li>Bonus Match: 200% match on first deposit</li>
-                <li>Minimum Deposit Amount: $20</li>
-                <li>Wager Requirement: 25 Times</li>
-                <li>Bonus Excluded in Wager Requirement: No</li>
-                <li>No Deposit Bonus: +$20 Free Spins</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End #2 - Unibet Casino -->
-
-      <!--Begin #3 - dafabet -->
-      <div class="dealer">
-        <div class="dealer__background dealer--red">
-          <img src="./assets/images/dafabet.png" alt="img" />
-        </div>
-        <div class="dealer__content">
-          <div class="dealer__content-header">
-            <div class="dunder-title"><span>#3</span>- dafabet</div>
-            <div class="dunder-right">
-              <button class="featured-right">
-                <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
-              </button>
-              <button class="number-right">
-                <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
-              </button>
-              <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-              &nbsp;<img src="./assets/icons/alert.svg" alt="" />
-            </div>
-          </div>
-          <div class="dealer__content-body">
-            <div class="body__country">
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/VietNam.svg" alt="" /> Players from
-                Greece
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" /> English website
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" />English customer
-                support
-              </div>
-              <div class="country">
-                <img src="./assets/icons/small-remove.svg" alt="" />
-                <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
-              </div>
-            </div>
-            <div class="body__desc">
-              <ul>
-                <li>34 Game Providers</li>
-                <li>12 Payment Methods</li>
-                <li>Gaming License</li>
-                <li>VPN Not Allowed</li>
-              </ul>
-            </div>
-            <div class="body__gift gift__color-yellow">
-              <div class="gift-box">
-                <img src="./assets/icons/gift-box.svg" alt="" />
-              </div>
-              <div class="sale-box">Exclusive</div>
-              <p>121% up to $500 and 200 extra spins</p>
-              <div class="apply">T&C’s Apply</div>
-            </div>
-          </div>
-          <div class="dealer__content_footer">
-            <button class="visit-casino">Visit Casino</button>
-            <button class="visit-review">Review</button>
-            <button onclick="toggleViewAll()" class="less-details">
-              Less Details <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="dealer__content-hidden">
-            <div class="left-desc">
-              <p>
-                <img src="./assets/icons/iicon.svg" alt="" /> Why play here?
-              </p>
-              <ul>
-                <li>Large selection of games from multiple suppliers</li>
-                <li>Mobile & live casino supported</li>
-                <li>24/7 support via live chat and email</li>
-                <li>Licensed in UK</li>
-                <li>Large online progressive slots</li>
-              </ul>
-            </div>
-            <div class="right-desc">
-              <p>
-                <img src="./assets/icons/giftblue.svg" alt="" /> Bonus Details
-              </p>
-              <ul>
-                <li>Maximum First Deposit Bonus: up to $50</li>
-                <li>Bonus Match: 200% match on first deposit</li>
-                <li>Minimum Deposit Amount: $20</li>
-                <li>Wager Requirement: 25 Times</li>
-                <li>Bonus Excluded in Wager Requirement: No</li>
-                <li>No Deposit Bonus: +$20 Free Spins</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End #3 - dafabet -->
-
-      <!-- Begin #4 - happistar -->
-      <div class="dealer">
-        <div class="dealer__background dealer--blue">
-          <img src="./assets/images/happiStart.png" alt="img" />
-        </div>
-        <div class="dealer__content">
-          <div class="dealer__content-header">
-            <div class="dunder-title"><span>#4</span>- happistar</div>
-            <div class="dunder-right">
-              <button class="featured-right">
-                <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
-              </button>
-              <button class="number-right">
-                <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
-              </button>
-              <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-              &nbsp;<img src="./assets/icons/alert.svg" alt="" />
-            </div>
-          </div>
-          <div class="dealer__content-body">
-            <div class="body__country">
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/VietNam.svg" alt="" /> Players from
-                Greece
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" /> English website
-              </div>
-              <div class="country">
-                <img src="./assets/icons/check-sticker.svg" alt="" />
-                <img src="./assets/icons/USA-larg.svg" alt="" />English customer
-                support
-              </div>
-              <div class="country">
-                <img src="./assets/icons/small-remove.svg" alt="" />
-                <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
-              </div>
-            </div>
-            <div class="body__desc">
-              <ul>
-                <li>34 Game Providers</li>
-                <li>12 Payment Methods</li>
-                <li>Gaming License</li>
-                <li>VPN Not Allowed</li>
-              </ul>
-            </div>
-            <div class="body__gift gift__color-yellow">
-              <div class="gift-box">
-                <img src="./assets/icons/gift-box.svg" alt="" />
-              </div>
-              <div class="sale-box">Exclusive</div>
-              <p>121% up to $500 and 200 extra spins, On Game Reel and other games</p>
-              <div class="apply">T&C’s Apply</div>
-            </div>
-          </div>
-          <div class="dealer__content_footer">
-            <button class="visit-casino">Visit Casino</button>
-            <button class="visit-review">Review</button>
-            <button onclick="toggleViewAll()" class="less-details">
-              Less Details <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="dealer__content-hidden">
-            <div class="left-desc">
-              <p>
-                <img src="./assets/icons/iicon.svg" alt="" /> Why play here?
-              </p>
-              <ul>
-                <li>Large selection of games from multiple suppliers</li>
-                <li>Mobile & live casino supported</li>
-                <li>24/7 support via live chat and email</li>
-                <li>Licensed in UK</li>
-                <li>Large online progressive slots</li>
-              </ul>
-            </div>
-            <div class="right-desc">
-              <p>
-                <img src="./assets/icons/giftblue.svg" alt="" /> Bonus Details
-              </p>
-              <ul>
-                <li>Maximum First Deposit Bonus: up to $50</li>
-                <li>Bonus Match: 200% match on first deposit</li>
-                <li>Minimum Deposit Amount: $20</li>
-                <li>Wager Requirement: 25 Times</li>
-                <li>Bonus Excluded in Wager Requirement: No</li>
-                <li>No Deposit Bonus: +$20 Free Spins</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End #4 - happistar -->
-
-      <!-- pagination -->
-      <div class="btn-show">Show 18 more</div>
-      <div class="pagination">
-        <div class="pagination__pagesize">
-          <div class="page-number active">1</div>
-          <div class="page-number">2</div>
-          <div class="page-number">3</div>
-          <div class="page-number">4</div>
-          <div class="page-number">5</div>
-          <div class="page-number">...</div>
-          <div class="page-number">124</div>
-          <div class="page-number">
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="pagination__page-index">
-          <p>Showing results 1 - 18 of 4926</p>
-        </div>
-      </div>
-
-      <!-- desciption -->
-      <div class="description">
-        <div class="description__word">
-          <p class="desciption__line">
-            This list of online casinos is our best guess for casinos that will
-            best suit your needs. The top positions are reserved for secure
-            casinos with a perfect reputation, lots of players and a low ratio
-            of unfairly resolved complaints.
-          </p>
-          <p>
-            If you have more specific needs, feel free to use the tabs with
-            various casino options and our advanced filters.
-          </p>
-          <h2 id="how-to" class="title-one">
-            How to choose a good, secure and honest online casino
-          </h2>
-          <p>
-            Choosing a good online casino which meets all your requirements is
-            not as easy as it sounds. To make your life easier we have created a
-            short list of criteria you should always consider:
-          </p>
-          <ul>
-            <li>The casino accepts players from your country</li>
-            <li>
-              Good casino reputation (evaluated by our casino review team - pick
-              casinos with GOOD and PERFECT ratings)
-            </li>
-            <li>License from a respected regulator</li>
-            <li>
-              Reasonably high revenues compared to your highest possible wins
-            </li>
-            <li>
-              High-enough withdrawal limits (compared to your highest possible
-              wins)
-            </li>
-            <li>
-              A selection of your favorite games (use the Game Provider filter
-              on the right)
-            </li>
-            <li>
-              Customer support and website localized in your native language
-            </li>
-            <li>Fast and helpful customer support</li>
-            <li>Attractive and fair bonuses</li>
-            <li>
-              Suitable deposit and withdrawal options (use the Payment Method
-              filter on the right)
-            </li>
-            <li>Intuitive and nice website</li>
-            <li>Support for mobile devices</li>
-          </ul>
-          <p>
-            If you are interested in the details, you can check out our article
-            "How to choose an online casino?".
-          </p>
-          <h2 id="criteria" class="title-two">
-            The criteria used for calculating our online casino ratings
-          </h2>
-          <p>
-            Soon after we started Casino.Guru as a project, we realized that we
-            needed to rate online casinos based on objective criteria. Trying
-            the casino on our own isn’t enough to get a representative
-            experience, and we would have to win huge amounts in every casino we
-            reviewed to prove that they pay out on big winnings. That is just
-            not possible.
-          </p>
-          <p>
-            That’s why our reviews are based on the experience of other players,
-            sourced from rigorous research of various forums, mediation websites
-            and other sources. It’s not an easy task to judge who was right in
-            the case of complaints which remain unresolved. But in the end, we
-            usually get an impression of how the casino treats its players.
-          </p>
-          <p>
-            My basic formula for the casino reputation rating considers the:
-          </p>
-          <ul>
-            <li>
-              Number of complaints where we think the casino wasn’t acting fair
-            </li>
-            <li>Amount of money involved in these cases</li>
-            <li>
-              Number of casino visitors, its estimated revenues and how long the
-              casino operates
-            </li>
-          </ul>
-          <h2 id="how-we" class="title-three">
-            Writing honest casino reviews takes a lot of time
-          </h2>
-          <p>
-            Yes, it does. For casinos with a long track record it can take up to
-            20 hours. Our independent casino review team members read everything
-            they are able to find on the internet. They read all forums,
-            mediation websites or reviews posted by real users.
-          </p>
-          <p>
-            We are trying to save your time. Any case that falls foul of our
-            fair gambling codex is summarized in our casino review.
-          </p>
-          <h2 class="title-foure">
-            How we sort the casinos using our recommendation system
-          </h2>
-          <p>
-            The list of casinos you can see here is our best guess for casinos
-            which may suit your needs and preferences.
-          </p>
-          <p>
-            At first, we intentionally omit casinos which don’t accept players
-            from your country. It makes no sense to point you to them, right?
-          </p>
-          <p>
-            Secondly, we display casinos which we know are a great fit for a
-            certain country in the top positions.
-          </p>
-          <p>
-            Thirdly, we prefer casinos which are localized to your native
-            language or offer customer support in that language. Communication
-            in a native language is, for many players, a more comfortable
-            experience, and if a casino is localized, it will more likely
-            understand the specific needs of players from your country.
-          </p>
-          <p>
-            However, the localization ranking is already mixed with the
-            reputation ranking. So we display higher non-localized casinos with
-            PERFECT reputation over localized casinos with a BAD track-record.
-          </p>
-          <p>
-            On top of that, we use various other minor ranking criteria. But
-            ultimately, if you want to find the best casino for you as quickly
-            as possible, the easiest way is to use the filters on the right and
-            filter the casinos based on your own criteria.
-          </p>
-          <div class="note">
-            <img src="./assets/icons/content.svg" alt="note" />
+        <div class="dealer__content-hidden">
+          <div class="left-desc">
             <p>
-              Note: If we haven’t guessed your country or your native language
-              correctly, you can change them by clicking on the flag in the top
-              left corner in the main menu.
+              <img class="mr-5" src="./assets/icons/iicon.svg" alt="" /> Why
+              play here?
+            </p>
+            <ul>
+              <li>Large selection of games from multiple suppliers</li>
+              <li>Mobile & live casino supported</li>
+              <li>24/7 support via live chat and email</li>
+              <li>Licensed in UK</li>
+              <li>Large online progressive slots</li>
+            </ul>
+          </div>
+          <div class="right-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/giftblue.svg" alt="" />
+              Bonus Details
+            </p>
+            <ul>
+              <li>Maximum First Deposit Bonus: up to $50</li>
+              <li>Bonus Match: 200% match on first deposit</li>
+              <li>Minimum Deposit Amount: $20</li>
+              <li>Wager Requirement: 25 Times</li>
+              <li>Bonus Excluded in Wager Requirement: No</li>
+              <li>No Deposit Bonus: +$20 Free Spins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End DUNDER CASINO -->
+
+    <!-- Begin #2 - Unibet Casino -->
+    <div class="dealer unibet">
+      <div class="dealer__background dealer--green">
+        <img src="./assets/images/unibet.png" alt="img" />
+      </div>
+      <div class="dealer__content">
+        <div class="dealer__content-header">
+          <div class="dunder-title">
+            <img src="./assets/images/small-unibet.png" alt="img" />
+            <span>#2</span>- Unibet Casino
+          </div>
+          <img src="./assets/icons/star-yellow.svg" alt="img" class="ratting" />
+          <div class="dunder-right">
+            <button class="featured-right">
+              <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
+            </button>
+            <button class="number-right">
+              <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
+            </button>
+            <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
+            &nbsp;<img src="./assets/icons/alert.svg" alt="" />
+          </div>
+        </div>
+        <div class="dealer__content-body">
+          <div class="body__country">
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/VietNam.svg" alt="" /> Players from
+              Greece
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" /> English website
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" />English customer
+              support
+            </div>
+            <div class="country">
+              <img src="./assets/icons/small-remove.svg" alt="" />
+              <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
+            </div>
+          </div>
+          <div class="body__desc">
+            <ul>
+              <li>34 Game Providers</li>
+              <li>12 Payment Methods</li>
+              <li>Gaming License</li>
+              <li>VPN Not Allowed</li>
+            </ul>
+          </div>
+          <div class="body__gift gift__color-yellow">
+            <div class="gift-box">
+              <img src="./assets/icons/gift-box.svg" alt="" />
+            </div>
+            <div class="sale-box">Bonus</div>
+            <p>121% up to $500 and 200 extra spins</p>
+            <div class="apply">T&C’s Apply</div>
+          </div>
+        </div>
+        <div class="dealer__content_footer">
+          <button class="visit-casino"></button>
+          <button class="visit-review">Review</button>
+          <button onclick="toggleViewAll()" class="less-details">
+            Less Details <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="dealer__content-hidden">
+          <div class="left-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/iicon.svg" alt="" /> Why
+              play here?
+            </p>
+            <ul>
+              <li>Large selection of games from multiple suppliers</li>
+              <li>Mobile & live casino supported</li>
+              <li>24/7 support via live chat and email</li>
+              <li>Licensed in UK</li>
+              <li>Large online progressive slots</li>
+            </ul>
+          </div>
+          <div class="right-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/giftblue.svg" alt="" />
+              Bonus Details
+            </p>
+            <ul>
+              <li>Maximum First Deposit Bonus: up to $50</li>
+              <li>Bonus Match: 200% match on first deposit</li>
+              <li>Minimum Deposit Amount: $20</li>
+              <li>Wager Requirement: 25 Times</li>
+              <li>Bonus Excluded in Wager Requirement: No</li>
+              <li>No Deposit Bonus: +$20 Free Spins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End #2 - Unibet Casino -->
+
+    <!--Begin #3 - dafabet -->
+    <div class="dealer dafabet">
+      <div class="dealer__background dealer--red">
+        <img src="./assets/images/dafabet.png" alt="img" />
+      </div>
+      <div class="dealer__content">
+        <div class="dealer__content-header">
+          <div class="dunder-title">
+            <img src="./assets/images/small-dafabet.png" alt="img" />
+            <span>#3</span>- dafabet
+          </div>
+          <img src="./assets/icons/star-yellow.svg" alt="icon" class="ratting" />
+          <div class="dunder-right">
+            <button class="featured-right">
+              <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
+            </button>
+            <button class="number-right">
+              <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
+            </button>
+            <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
+            &nbsp;<img src="./assets/icons/alert.svg" alt="" />
+          </div>
+        </div>
+        <div class="dealer__content-body">
+          <div class="body__country">
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/VietNam.svg" alt="" /> Players from
+              Greece
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" /> English website
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" />English customer
+              support
+            </div>
+            <div class="country">
+              <img src="./assets/icons/small-remove.svg" alt="" />
+              <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
+            </div>
+          </div>
+          <div class="body__desc">
+            <ul>
+              <li>34 Game Providers</li>
+              <li>12 Payment Methods</li>
+              <li>Gaming License</li>
+              <li>VPN Not Allowed</li>
+            </ul>
+          </div>
+          <div class="body__gift gift__color-yellow">
+            <div class="gift-box">
+              <img src="./assets/icons/gift-box.svg" alt="" />
+            </div>
+            <div class="sale-box">Bonus</div>
+            <p>121% up to $500 and 200 extra spins</p>
+            <div class="apply">T&C’s Apply</div>
+          </div>
+        </div>
+        <div class="dealer__content_footer">
+          <button class="visit-casino"></button>
+          <button class="visit-review">Review</button>
+          <button onclick="toggleViewAll()" class="less-details">
+            Less Details <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="dealer__content-hidden">
+          <div class="left-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/iicon.svg" alt="" /> Why
+              play here?
+            </p>
+            <ul>
+              <li>Large selection of games from multiple suppliers</li>
+              <li>Mobile & live casino supported</li>
+              <li>24/7 support via live chat and email</li>
+              <li>Licensed in UK</li>
+              <li>Large online progressive slots</li>
+            </ul>
+          </div>
+          <div class="right-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/giftblue.svg" alt="" />
+              Bonus Details
+            </p>
+            <ul>
+              <li>Maximum First Deposit Bonus: up to $50</li>
+              <li>Bonus Match: 200% match on first deposit</li>
+              <li>Minimum Deposit Amount: $20</li>
+              <li>Wager Requirement: 25 Times</li>
+              <li>Bonus Excluded in Wager Requirement: No</li>
+              <li>No Deposit Bonus: +$20 Free Spins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End #3 - dafabet -->
+
+    <!-- Begin #4 - happistar -->
+    <div class="dealer happistar">
+      <div class="dealer__background dealer--blue">
+        <img src="./assets/images/happiStart.png" alt="img" />
+      </div>
+      <div class="dealer__content">
+        <div class="dealer__content-header">
+          <div class="dunder-title"><span>#4</span>- happistar</div>
+          <div class="dunder-right">
+            <button class="featured-right">
+              <img src="./assets/icons/star-ratting.svg" alt="" /> Featured
+            </button>
+            <button class="number-right">
+              <img src="./assets/icons/ribon.svg" alt="" /> 9.33/10
+            </button>
+            <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
+            &nbsp;<img src="./assets/icons/alert.svg" alt="" />
+          </div>
+        </div>
+        <div class="dealer__content-body">
+          <div class="body__country">
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/VietNam.svg" alt="" /> Players from
+              Greece
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" /> English website
+            </div>
+            <div class="country">
+              <img src="./assets/icons/check-sticker.svg" alt="" />
+              <img src="./assets/icons/USA-larg.svg" alt="" />English customer
+              support
+            </div>
+            <div class="country">
+              <img src="./assets/icons/small-remove.svg" alt="" />
+              <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
+            </div>
+          </div>
+          <div class="body__desc">
+            <ul>
+              <li>34 Game Providers</li>
+              <li>12 Payment Methods</li>
+              <li>Gaming License</li>
+              <li>VPN Not Allowed</li>
+            </ul>
+          </div>
+          <div class="body__gift gift__color-yellow">
+            <div class="gift-box">
+              <img src="./assets/icons/gift-box.svg" alt="" />
+            </div>
+            <div class="sale-box">Bonus</div>
+            <p>
+              121% up to $500 and 200 extra spins, On Game Reel and other
+              games
+            </p>
+            <div class="apply">T&C’s Apply</div>
+          </div>
+        </div>
+        <div class="dealer__content_footer">
+          <button class="visit-casino"></button>
+          <button class="visit-review">Review</button>
+          <button onclick="toggleViewAll()" class="less-details">
+            Less Details <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="dealer__content-hidden">
+          <div class="left-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/iicon.svg" alt="" /> Why
+              play here?
+            </p>
+            <ul>
+              <li>Large selection of games from multiple suppliers</li>
+              <li>Mobile & live casino supported</li>
+              <li>24/7 support via live chat and email</li>
+              <li>Licensed in UK</li>
+              <li>Large online progressive slots</li>
+            </ul>
+          </div>
+          <div class="right-desc">
+            <p>
+              <img class="mr-5" src="./assets/icons/giftblue.svg" alt="" />
+              Bonus Details
+            </p>
+            <ul>
+              <li>Maximum First Deposit Bonus: up to $50</li>
+              <li>Bonus Match: 200% match on first deposit</li>
+              <li>Minimum Deposit Amount: $20</li>
+              <li>Wager Requirement: 25 Times</li>
+              <li>Bonus Excluded in Wager Requirement: No</li>
+              <li>No Deposit Bonus: +$20 Free Spins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End #4 - happistar -->
+
+    <!-- pagination -->
+    <div class="btn-show">Show 18 more</div>
+    <div class="pagination">
+      <div class="pagination__pagesize">
+        <div class="page-number active">1</div>
+        <div class="page-number">2</div>
+        <div class="page-number">3</div>
+        <div class="page-number">4</div>
+        <div class="page-number">5</div>
+        <div class="page-number">...</div>
+        <div class="page-number">124</div>
+        <div class="page-number">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="pagination__page-index">
+        <p>Showing results 1 - 18 of 4926</p>
+      </div>
+      <div class="pagination__btn">
+        <button id="button-pre" class="pagination__btn--pre btn-pagination">
+          <i class="fa-solid fa-chevron-left"></i> Previous
+        </button>
+        <button id="button-next" class="pagination__btn--next btn-pagination">
+          Next <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- desciption -->
+    <div class="description">
+      <div class="description__word">
+        <p class="desciption__line">
+          This list of online casinos is our best guess for casinos that will
+          best suit your needs. The top positions are reserved for secure
+          casinos with a perfect reputation, lots of players and a low ratio
+          of unfairly resolved complaints.
+        </p>
+        <p>
+          If you have more specific needs, feel free to use the tabs with
+          various casino options and our advanced filters.
+        </p>
+        <div class="desc br-t">
+          <div class="d-flex desciption__title-one">
+            <h2 id="how-to" class="title-one">
+              How to choose a good, secure and honest online casino
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              Choosing a good online casino which meets all your requirements
+              is not as easy as it sounds. To make your life easier we have
+              created a short list of criteria you should always consider:
+            </p>
+            <ul>
+              <li>The casino accepts players from your country</li>
+              <li>
+                Good casino reputation (evaluated by our casino review team -
+                pick casinos with GOOD and PERFECT ratings)
+              </li>
+              <li>License from a respected regulator</li>
+              <li>
+                Reasonably high revenues compared to your highest possible
+                wins
+              </li>
+              <li>
+                High-enough withdrawal limits (compared to your highest
+                possible wins)
+              </li>
+              <li>
+                A selection of your favorite games (use the Game Provider
+                filter on the right)
+              </li>
+              <li>
+                Customer support and website localized in your native language
+              </li>
+              <li>Fast and helpful customer support</li>
+              <li>Attractive and fair bonuses</li>
+              <li>
+                Suitable deposit and withdrawal options (use the Payment
+                Method filter on the right)
+              </li>
+              <li>Intuitive and nice website</li>
+              <li>Support for mobile devices</li>
+            </ul>
+            <p>
+              If you are interested in the details, you can check out our
+              article "How to choose an online casino?".
             </p>
           </div>
-          <h2 id="casinos" class="title-five">
-            How to find the best casino for your country
-          </h2>
-          <p>
-            As already mentioned above, the casino list you can see on this page
-            is already localized for your country, based on the IP address from
-            which you are accessing our website. If you want to view online
-            casinos that accept players from another country, you can use the
-            "For Players from" filter to select the desired country.
-          </p>
-          <p>
-            We put a lot of effort into having our casino database up to date,
-            including the countries from which each casino accepts players. That
-            said, there are also websites specialized in individual countries,
-            on which you can find country-specific lists of casinos. You can
-            find some of them below.
-          </p>
-          <p>
-            <strong>United Kingdom</strong><br />Players from the United Kingdom
-            can choose from a big number of great casinos, with one of the best
-            gambling licensing authorities (UK Gambling Commission) governs all
-            gambling activities in the country. You can check out our list of UK
-            online casinos, or dedicated websites like kingcasinobonus.co.uk
-            which specializes in casino bonuses for UK players, but also has a
-            list of best casinos for players from the UK.
-          </p>
-          <p>
-            <strong>Italy</strong><br />Gambling in Italy is legal and regulated
-            from 2011, when a new gambling law has been introduced. Italian
-            players can browse online casinos and casino bonuses right here on
-            Casino Guru, either in English, or by visiting the version of our
-            website localised for the Italian market available at
-            casinoguru-it.com.
-          </p>
-          <p>
-            <strong>Greece</strong><br />The Greek gambling market is strongly
-            influenced by the country's intention to keep the state-run OPAP a
-            monopoly, which, however, violates EU laws. Greece's gambling laws
-            are being amended and it's expected that other online casinos will
-            be able to get official Greek licenses again. Greek players can find
-            relevant online casinos on gr.casino.guru.
-          </p>
-          <p>
-            <strong>Czech Republic</strong><br />Czech Republic has introduced a
-            new Gambling Act back in 2017, which governs all online gambling
-            operators who wish to legally target Czech players. Players from
-            Czech Republic can find relevant online casinos on the Czech version
-            on Casino Guru available at kasinoguru-cz.com.
-          </p>
-          <h2 id="advanced" class="title-six">
-            Filters you can use to find the right casino faster
-          </h2>
-          <p>
-            The filtering options are one of the technically strongest features
-            of the Casino Guru website. It took a lot of effort to design and
-            implement them. They are our gift for the advanced users who know
-            what they are searching for and for those who want to get the most
-            relevant results as quickly as possible.
-          </p>
-          <ul class="title-li">
-            <li>
-              <strong>For players from</strong> – Display only the casinos that
-              accept players from one of the selected countries
-            </li>
-            <li>
-              <strong>Casino Games</strong> – Filter the casinos that have one
-              of the selected casino games
-            </li>
-            <li>
-              <strong>Game provider</strong> – The casinos that have games from
-              at least one of selected game providers
-            </li>
-            <li>
-              <strong>Payment method</strong> – The casinos that offer deposits
-              or withdrawals with at least one of selected payment providers
-            </li>
-            <li>
-              <strong>Licensing authority</strong> – Pick only the casinos that
-              operate under a certain license
-            </li>
-            <li>
-              <strong>Safe amount to win</strong> – Use this filter to get
-              financially strong casinos with lots of players
-            </li>
-            <li>
-              <strong>Withdrawal limit</strong> – If you plan to win big, you’ll
-              need a high withdrawal limit to cash out your win quickly and
-              without any issues
-            </li>
-            <li>
-              <strong>Currency</strong> – This filter is for you if you prefer
-              to play in your local currency
-            </li>
-            <li>
-              <strong>Mobile Devices</strong> – Find casinos which support
-              players with smartphones and tablets
-            </li>
-            <li>
-              <strong>Website language</strong> – The casinos with a localized
-              website
-            </li>
-            <li>
-              <strong>Customer support language</strong> – The casinos that are
-              able to at least react to support questions in your native
-              language
-            </li>
-            <li>
-              <strong>Live chat language</strong> – Find the casinos that have a
-              live chat in your native language (which is the most convenient
-              way to solve any problems or questions)
-            </li>
-          </ul>
-          <div class="table">
-            <div class="table__row table__header">
-              <div class="table__cell table__cell--60">Good behavior</div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                Points
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                Spent
-              </div>
-            </div>
-            <div class="table__row">
-              <div class="table__cell table__cell--60 table__cell--left">
-                Complete a side-project
-              </div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                +1
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                1.248.4000
-              </div>
-            </div>
-            <div class="table__row">
-              <div class="table__cell table__cell--60 table__cell--left">
-                Report a useful feedback (upon your verification)
-              </div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                +2
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                952.541
-              </div>
-            </div>
-            <div class="table__row">
-              <div class="table__cell table__cell--60 table__cell--left">
-                CReport an illegal download source (upon your mind)
-              </div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                +3
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                11.396.302
-              </div>
-            </div>
-            <div class="table__row">
-              <div class="table__cell table__cell--60 table__cell--left">
-                Share your experience
-              </div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                +1
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                89.393
-              </div>
-            </div>
-            <div class="table__row">
-              <div class="table__cell table__cell--60 table__cell--left">
-                Deploy a design system
-              </div>
-              <div class="table__cell table__cell--10 table__cell--center">
-                +1
-              </div>
-              <div class="table__cell table__cell--30 table__cell--center">
-                16.719
-              </div>
-            </div>
+        </div>
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 id="criteria" class="title-two">
+              The criteria used for calculating our online casino ratings
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
-          <h2 class="title-seven">
-            FAQ - Frequently Asked Questions & Answers
-          </h2>
-          <p>
-            As already mentioned above, the casino list you can see on this page
-            is already localized for your country, based on the IP address from
-            which you are accessing our website. If you want to view online
-            casinos that accept players from another country, you can use the
-            "For Players from" filter to select the desired country.
-          </p>
-          <div class="question">
-            <div class="question__header">
-              <p class="question__title">
-                How do I know the sites I am gambling at are safe?
+          <div class="title-one__one">
+            <p>
+              Soon after we started Casino.Guru as a project, we realized that
+              we needed to rate online casinos based on objective criteria.
+              Trying the casino on our own isn’t enough to get a
+              representative experience, and we would have to win huge amounts
+              in every casino we reviewed to prove that they pay out on big
+              winnings. That is just not possible.
+            </p>
+            <p>
+              That’s why our reviews are based on the experience of other
+              players, sourced from rigorous research of various forums,
+              mediation websites and other sources. It’s not an easy task to
+              judge who was right in the case of complaints which remain
+              unresolved. But in the end, we usually get an impression of how
+              the casino treats its players.
+            </p>
+            <p>
+              My basic formula for the casino reputation rating considers the:
+            </p>
+            <ul>
+              <li>
+                Number of complaints where we think the casino wasn’t acting
+                fair
+              </li>
+              <li>Amount of money involved in these cases</li>
+              <li>
+                Number of casino visitors, its estimated revenues and how long
+                the casino operates
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 id="how-we" class="title-three">
+              Writing honest casino reviews takes a lot of time
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              Yes, it does. For casinos with a long track record it can take
+              up to 20 hours. Our independent casino review team members read
+              everything they are able to find on the internet. They read all
+              forums, mediation websites or reviews posted by real users.
+            </p>
+            <p>
+              We are trying to save your time. Any case that falls foul of our
+              fair gambling codex is summarized in our casino review.
+            </p>
+          </div>
+        </div>
+
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 class="title-foure">
+              How we sort the casinos using our recommendation system
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              The list of casinos you can see here is our best guess for
+              casinos which may suit your needs and preferences.
+            </p>
+            <p>
+              At first, we intentionally omit casinos which don’t accept
+              players from your country. It makes no sense to point you to
+              them, right?
+            </p>
+            <p>
+              Secondly, we display casinos which we know are a great fit for a
+              certain country in the top positions.
+            </p>
+            <p>
+              Thirdly, we prefer casinos which are localized to your native
+              language or offer customer support in that language.
+              Communication in a native language is, for many players, a more
+              comfortable experience, and if a casino is localized, it will
+              more likely understand the specific needs of players from your
+              country.
+            </p>
+            <p>
+              However, the localization ranking is already mixed with the
+              reputation ranking. So we display higher non-localized casinos
+              with PERFECT reputation over localized casinos with a BAD
+              track-record.
+            </p>
+            <p>
+              On top of that, we use various other minor ranking criteria. But
+              ultimately, if you want to find the best casino for you as
+              quickly as possible, the easiest way is to use the filters on
+              the right and filter the casinos based on your own criteria.
+            </p>
+            <div class="note mb-10">
+              <img src="./assets/icons/content.svg" alt="note" />
+              <p>
+                Note: If we haven’t guessed your country or your native
+                language correctly, you can change them by clicking on the
+                flag in the top left corner in the main menu.
               </p>
-              <div class="question__icon">
-                <i class="fa-solid fa-circle-plus"></i>
-              </div>
-            </div>
-            <div class="question__answer">
-              As already mentioned above, the casino list you can see on this
-              page is already localized for your country, based on the IP
-              address from which you are accessing our website. If you want to
-              view online casinos that accept players from another country, you
-              can use the "For Players from" filter to select the desired
-              country.
-            </div>
-          </div>
-          <div class="question">
-            <div class="question__header">
-              <p class="question__title">
-                What are my options when making an online casino deposit?
-              </p>
-              <div class="question__icon">
-                <i class="fa-solid fa-circle-plus"></i>
-              </div>
-            </div>
-            <div class="question__answer">
-              As already mentioned above, the casino list you can see on this
-              page is already localized for your country, based on the IP
-              address from which you are accessing our website. If you want to
-              view online casinos that accept players from another country, you
-              can use the "For Players from" filter to select the desired
-              country.
-            </div>
-          </div>
-          <div class="question">
-            <div class="question__header">
-              <p class="question__title">How do I claim my welcome bonus?</p>
-              <div class="question__icon">
-                <i class="fa-solid fa-circle-plus"></i>
-              </div>
-            </div>
-            <div class="question__answer">
-              As already mentioned above, the casino list you can see on this
-              page is already localized for your country, based on the IP
-              address from which you are accessing our website. If you want to
-              view online casinos that accept players from another country, you
-              can use the "For Players from" filter to select the desired
-              country.
-            </div>
-          </div>
-          <div class="question">
-            <div class="question__header">
-              <p class="question__title">
-                Do I need to pay tax on my winnings?
-              </p>
-              <div class="question__icon">
-                <i class="fa-solid fa-circle-plus"></i>
-              </div>
-            </div>
-            <div class="question__answer">
-              As already mentioned above, the casino list you can see on this
-              page is already localized for your country, based on the IP
-              address from which you are accessing our website. If you want to
-              view online casinos that accept players from another country, you
-              can use the "For Players from" filter to select the desired
-              country.
-            </div>
-          </div>
-          <div class="question">
-            <div class="question__header">
-              <p class="question__title">Can I play free games online?</p>
-              <div class="question__icon">
-                <i class="fa-solid fa-circle-plus"></i>
-              </div>
-            </div>
-            <div class="question__answer">
-              As already mentioned above, the casino list you can see on this
-              page is already localized for your country, based on the IP
-              address from which you are accessing our website. If you want to
-              view online casinos that accept players from another country, you
-              can use the "For Players from" filter to select the desired
-              country.
             </div>
           </div>
         </div>
-        <div class="description__menu">
-          <div class="menu-box">
-            <div data-id="how-to" class="menu-item">
-              1. How to choose a casino
+
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 id="casinos" class="title-five">
+              How to find the best casino for your country
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              As already mentioned above, the casino list you can see on this
+              page is already localized for your country, based on the IP
+              address from which you are accessing our website. If you want to
+              view online casinos that accept players from another country,
+              you can use the "For Players from" filter to select the desired
+              country.
+            </p>
+            <p>
+              We put a lot of effort into having our casino database up to
+              date, including the countries from which each casino accepts
+              players. That said, there are also websites specialized in
+              individual countries, on which you can find country-specific
+              lists of casinos. You can find some of them below.
+            </p>
+            <p>
+              <strong>United Kingdom</strong><br />Players from the United
+              Kingdom can choose from a big number of great casinos, with one
+              of the best gambling licensing authorities (UK Gambling
+              Commission) governs all gambling activities in the country. You
+              can check out our list of UK online casinos, or dedicated
+              websites like kingcasinobonus.co.uk which specializes in casino
+              bonuses for UK players, but also has a list of best casinos for
+              players from the UK.
+            </p>
+            <p>
+              <strong>Italy</strong><br />Gambling in Italy is legal and
+              regulated from 2011, when a new gambling law has been
+              introduced. Italian players can browse online casinos and casino
+              bonuses right here on Casino Guru, either in English, or by
+              visiting the version of our website localised for the Italian
+              market available at casinoguru-it.com.
+            </p>
+            <p>
+              <strong>Greece</strong><br />The Greek gambling market is
+              strongly influenced by the country's intention to keep the
+              state-run OPAP a monopoly, which, however, violates EU laws.
+              Greece's gambling laws are being amended and it's expected that
+              other online casinos will be able to get official Greek licenses
+              again. Greek players can find relevant online casinos on
+              gr.casino.guru.
+            </p>
+            <p>
+              <strong>Czech Republic</strong><br />Czech Republic has
+              introduced a new Gambling Act back in 2017, which governs all
+              online gambling operators who wish to legally target Czech
+              players. Players from Czech Republic can find relevant online
+              casinos on the Czech version on Casino Guru available at
+              kasinoguru-cz.com.
+            </p>
+          </div>
+        </div>
+
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 id="advanced" class="title-six">
+              Filters you can use to find the right casino faster
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              The filtering options are one of the technically strongest
+              features of the Casino Guru website. It took a lot of effort to
+              design and implement them. They are our gift for the advanced
+              users who know what they are searching for and for those who
+              want to get the most relevant results as quickly as possible.
+            </p>
+            <ul class="title-li">
+              <li>
+                <strong>For players from</strong> – Display only the casinos
+                that accept players from one of the selected countries
+              </li>
+              <li>
+                <strong>Casino Games</strong> – Filter the casinos that have
+                one of the selected casino games
+              </li>
+              <li>
+                <strong>Game provider</strong> – The casinos that have games
+                from at least one of selected game providers
+              </li>
+              <li>
+                <strong>Payment method</strong> – The casinos that offer
+                deposits or withdrawals with at least one of selected payment
+                providers
+              </li>
+              <li>
+                <strong>Licensing authority</strong> – Pick only the casinos
+                that operate under a certain license
+              </li>
+              <li>
+                <strong>Safe amount to win</strong> – Use this filter to get
+                financially strong casinos with lots of players
+              </li>
+              <li>
+                <strong>Withdrawal limit</strong> – If you plan to win big,
+                you’ll need a high withdrawal limit to cash out your win
+                quickly and without any issues
+              </li>
+              <li>
+                <strong>Currency</strong> – This filter is for you if you
+                prefer to play in your local currency
+              </li>
+              <li>
+                <strong>Mobile Devices</strong> – Find casinos which support
+                players with smartphones and tablets
+              </li>
+              <li>
+                <strong>Website language</strong> – The casinos with a
+                localized website
+              </li>
+              <li>
+                <strong>Customer support language</strong> – The casinos that
+                are able to at least react to support questions in your native
+                language
+              </li>
+              <li>
+                <strong>Live chat language</strong> – Find the casinos that
+                have a live chat in your native language (which is the most
+                convenient way to solve any problems or questions)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table">
+          <div class="table__row table__header">
+            <div class="table__cell table__cell--60">Good behavior</div>
+            <div class="table__cell table__cell--10 table__cell--center">
+              Points
             </div>
-            <div data-id="criteria" class="menu-item">
-              2. Criteria used in our ratings
+            <div class="table__cell table__cell--30 table__cell--center">
+              Spent
             </div>
-            <div data-id="how-we" class="menu-item">3. How we sort casinos</div>
-            <div data-id="casinos" class="menu-item">
-              4. Casinos for specific countries
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--60 table__cell--left">
+              Complete a side-project
             </div>
-            <div data-id="advanced" class="menu-item">
-              5. Advanced casino filters
+            <div class="table__cell table__cell--10 table__cell--center">
+              +1
+            </div>
+            <div class="table__cell table__cell--30 table__cell--center">
+              1.248.4000
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--60 table__cell--left">
+              Report a useful feedback (upon your verification)
+            </div>
+            <div class="table__cell table__cell--10 table__cell--center">
+              +2
+            </div>
+            <div class="table__cell table__cell--30 table__cell--center">
+              952.541
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--60 table__cell--left">
+              CReport an illegal download source (upon your mind)
+            </div>
+            <div class="table__cell table__cell--10 table__cell--center">
+              +3
+            </div>
+            <div class="table__cell table__cell--30 table__cell--center">
+              11.396.302
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--60 table__cell--left">
+              Share your experience
+            </div>
+            <div class="table__cell table__cell--10 table__cell--center">
+              +1
+            </div>
+            <div class="table__cell table__cell--30 table__cell--center">
+              89.393
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--60 table__cell--left">
+              Deploy a design system
+            </div>
+            <div class="table__cell table__cell--10 table__cell--center">
+              +1
+            </div>
+            <div class="table__cell table__cell--30 table__cell--center">
+              16.719
+            </div>
+          </div>
+        </div>
+        <div class="desc">
+          <div class="d-flex desciption__title-one">
+            <h2 class="title-seven">
+              FAQ - Frequently Asked Questions & Answers
+            </h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="title-one__one">
+            <p>
+              As already mentioned above, the casino list you can see on this
+              page is already localized for your country, based on the IP
+              address from which you are accessing our website. If you want to
+              view online casinos that accept players from another country,
+              you can use the "For Players from" filter to select the desired
+              country.
+            </p>
+            <div class="question">
+              <div class="question__header">
+                <p class="question__title">
+                  How do I know the sites I am gambling at are safe?
+                </p>
+                <div class="question__icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+              <div class="question__answer">
+                As already mentioned above, the casino list you can see on
+                this page is already localized for your country, based on the
+                IP address from which you are accessing our website. If you
+                want to view online casinos that accept players from another
+                country, you can use the "For Players from" filter to select
+                the desired country.
+              </div>
+            </div>
+            <div class="question">
+              <div class="question__header">
+                <p class="question__title">
+                  What are my options when making an online casino deposit?
+                </p>
+                <div class="question__icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+              <div class="question__answer">
+                As already mentioned above, the casino list you can see on
+                this page is already localized for your country, based on the
+                IP address from which you are accessing our website. If you
+                want to view online casinos that accept players from another
+                country, you can use the "For Players from" filter to select
+                the desired country.
+              </div>
+            </div>
+            <div class="question">
+              <div class="question__header">
+                <p class="question__title">
+                  How do I claim my welcome bonus?
+                </p>
+                <div class="question__icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+              <div class="question__answer">
+                As already mentioned above, the casino list you can see on
+                this page is already localized for your country, based on the
+                IP address from which you are accessing our website. If you
+                want to view online casinos that accept players from another
+                country, you can use the "For Players from" filter to select
+                the desired country.
+              </div>
+            </div>
+            <div class="question">
+              <div class="question__header">
+                <p class="question__title">
+                  Do I need to pay tax on my winnings?
+                </p>
+                <div class="question__icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+              <div class="question__answer">
+                As already mentioned above, the casino list you can see on
+                this page is already localized for your country, based on the
+                IP address from which you are accessing our website. If you
+                want to view online casinos that accept players from another
+                country, you can use the "For Players from" filter to select
+                the desired country.
+              </div>
+            </div>
+            <div class="question">
+              <div class="question__header">
+                <p class="question__title">Can I play free games online?</p>
+                <div class="question__icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+              </div>
+              <div class="question__answer">
+                As already mentioned above, the casino list you can see on
+                this page is already localized for your country, based on the
+                IP address from which you are accessing our website. If you
+                want to view online casinos that accept players from another
+                country, you can use the "For Players from" filter to select
+                the desired country.
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- footer -->
-      <footer class="footer">
-        <div class="footer__menu">
-          <ul class="footer__menu-items">
-            <li class="footer__menu-item active-menu">
-              <a href="#">Contact Us</a>
-            </li>
-            <li class="footer__menu-item"><a href="#">About Us</a></li>
-            <li class="footer__menu-item"><a href="#">Privacy</a></li>
-            <li class="footer__menu-item"><a href="#">Terms</a></li>
-          </ul>
-          <div class="footer__description">
-            DISCLAIMER: Online Wagering is illegal in some Jurisdictions. It is
-            your responsibility to check your local regulations before playing
-            online. PlayUnited.com takes no responsibility for your actions.
-            PlayUnited.com 2019 All rights reserved.
+      <div class="description__menu">
+        <div class="menu-box">
+          <div data-id="how-to" class="menu-item">
+            1. How to choose a casino
+          </div>
+          <div data-id="criteria" class="menu-item">
+            2. Criteria used in our ratings
+          </div>
+          <div data-id="how-we" class="menu-item">3. How we sort casinos</div>
+          <div data-id="casinos" class="menu-item">
+            4. Casinos for specific countries
+          </div>
+          <div data-id="advanced" class="menu-item">
+            5. Advanced casino filters
           </div>
         </div>
-        <div class="footer__image">
-          <img
-            src="./assets/images/image 3.1.png"
-            alt="Ảnh mô tả cho website"
-          />
-        </div>
-      </footer>
-    </section>
-    <!-- End primary content -->
-    <script src="./app.js"></script>
-  </body>
+      </div>
+    </div>
+    <!-- More Mobile -->
+    <div class="more">
+      <button id="moreBtn">
+        More <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+    <!-- Filter Mobile-->
+    <div class="filter-mobile">
+      <div class="filter-mobile__item">
+        <img class="mr-5" src="./assets/icons/filter-mobile.svg" alt="icon" />
+        <p>Filter (2)</p>
+      </div>
+      <div class="filter-mobile__item">
+        <img class="mr-5" src="./assets/icons/sort-mobile.svg" alt="icon" />
+        <p>Sort</p>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__menu-wrapper">
+        <ul class="footer__menu-items">
+          <li class="footer__menu-item active-menu">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="footer__menu-item"><a href="#">About Us</a></li>
+          <li class="footer__menu-item"><a href="#">Privacy</a></li>
+          <li class="footer__menu-item"><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer__description">
+        DISCLAIMER: Online Wagering is illegal in some Jurisdictions. It is
+        your responsibility to check your local regulations before playing
+        online. PlayUnited.com takes no responsibility for your actions.
+        PlayUnited.com 2019 All rights reserved.
+      </div>
+      <div class="footer__image">
+        <img src="./assets/images/image 3.1.png" alt="Ảnh mô tả cho website" />
+      </div>
+    </footer>
+  </section>
+  <!-- End primary content -->
+  <script src="./app.js"></script>
+</body>
+
 </html>

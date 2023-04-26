@@ -19,6 +19,7 @@ $Oswald-font: url("../fonts/Oswald/static/Oswald-Regular.ttf");
 @import "variables";
 @import "index";
 @import "form";
+@import "mobile";
 
 body {
   font-family: "lato";
@@ -35,6 +36,15 @@ body {
   background: #0c1245;
   z-index: 100;
   transition: all 0.5s ease;
+  .sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .sidebar.sidebar--close .close-btn {
+    display: none;
+  }
+  
 }
 
 .sidebar.sidebar--close {
@@ -238,6 +248,9 @@ body {
     color: #1e60e1;
     font-size: 35px;
   }
+  .home-header__logo {
+    display: none;
+  }
 }
 .home-section .home-header .bx-menu {
   margin: 0 15px;
@@ -292,6 +305,9 @@ body {
     display: flex;
   }
 }
+.breadcrumbs-ipad {
+  display: none;
+}
 
 // begin title
 .title {
@@ -328,38 +344,43 @@ body {
     background-color: $primary;
     transition: all 0.2s ease;
   }
-
-  .tab-item {
-    min-width: 80px;
-    padding: 16px 20px 11px 20px;
-    margin-right: 10px;
-    font-weight: 700;
-    font-size: 17px;
-    text-align: center;
-    color: #111111;
-    background-color: #fff;
-    border-radius: 6px 6px 0 0;
-    border-bottom: 5px solid transparent;
-    cursor: pointer;
-    transition: all 0.5s ease;
-
-    .tab-icon {
-      font-size: 24px;
-      width: 32px;
-      position: relative;
-      top: 2px;
-    }
-
-    &:hover {
-      opacity: 1;
-      background-color: rgba(194, 53, 100, 0.05);
-      border-color: rgba(194, 53, 100, 0.1);
-    }
-
-    &.active {
-      opacity: 1;
+  .tabs__scroll {
+    display: flex;
+    .tab-item {
+      // min-width: 80px;
+      padding: 16px 20px 11px 20px;
+      margin-right: 10px;
+      font-weight: 700;
+      font-size: 17px;
+      text-align: center;
+      color: #111111;
+      background-color: #fff;
+      border-radius: 6px 6px 0 0;
+      border-bottom: 5px solid transparent;
+      cursor: pointer;
+      transition: all 0.5s ease;
+  
+      .tab-icon {
+        font-size: 24px;
+        width: 32px;
+        position: relative;
+        top: 2px;
+      }
+  
+      &:hover {
+        opacity: 1;
+        background-color: rgba(194, 53, 100, 0.05);
+        border-color: rgba(194, 53, 100, 0.1);
+      }
+  
+      &.active {
+        opacity: 1;
+        background-color: $primary;
+        color: #FFFFFF;
+      }
     }
   }
+  
 }
 
 .tab-content {
@@ -432,6 +453,7 @@ body {
   .filter__left {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     span {
       border: 1px solid #dddddd;
       background-color: #ffffff;
@@ -551,6 +573,12 @@ body {
       span {
         color: $primary;
       }
+      img {
+         display: none;
+      }
+    }
+    .ratting {
+        display: none;
     }
     .dunder-right {
       margin: 0 10px;
@@ -670,6 +698,7 @@ body {
     }
     .gift__color-yellow {
       border: 5px solid #f6bf31;
+      max-height: -webkit-fill-available;
       p {
         color: #0c1245;
       }
@@ -700,6 +729,13 @@ body {
       color: #ffffff;
       font-weight: 700;
     }
+    .visit-casino::before {
+      content: "Visit Casino";
+  }
+  .visit-casino::after {
+      content: "Visit";
+      display: none;
+  }
     .visit-review {
       width: 150px;
       height: 44px;
@@ -739,6 +775,7 @@ body {
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
+      align-items: center;
     }
     ul {
       padding: 20px;
@@ -751,6 +788,7 @@ body {
     justify-content: space-between;
     p {
       display: flex;
+      align-items: center;
       color: #111111;
       font-weight: 700;
       font-size: 18px;
@@ -817,6 +855,10 @@ body {
     font-size: 16px;
     line-height: 19px;
   }
+  .pagination__btn {
+    display: none;
+  }
+
 }
 //  description
 .description {
@@ -834,6 +876,9 @@ body {
       word-break: break-word;
       margin-top: 10px;
       margin-bottom: 20px;
+    }
+    .desciption__title-one i{
+      display: none;
     }
     .desciption__line {
       margin-bottom: 25px;
@@ -877,6 +922,8 @@ body {
       width: 100%;
       border: 1px solid #ccc;
       border-collapse: collapse;
+      table-layout: fixed;
+      margin-bottom: 10px;
       .table__row {
         display: flex;
         width: 100%;
@@ -888,6 +935,7 @@ body {
       .table__cell {
         border: 1px solid #ccc;
         padding: 10px;
+        min-width: 100px;
       }
       .table__cell--60 {
         flex-basis: 60%;
@@ -908,6 +956,7 @@ body {
         justify-content: center;
         display: flex;
         align-items: center;
+        
       }
     }
     .question {
@@ -949,7 +998,12 @@ body {
     padding: 20px;
     display: flex;
     justify-content: flex-end;
+    position: sticky;
+    top: 0;
     .menu-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       max-width: 258px;
       max-height: 192px;
       width: 100%;
@@ -959,33 +1013,58 @@ body {
       position: sticky;
       top: 10px;
       .menu-item {
-        padding: 15px 0 0 14px;
+        margin: 10px 0;
+        padding-left: 10px;
         cursor: pointer;
+        
+        &:hover {
+          color: $primary;
+          font-weight: 700;
+        }
       }
+     
     }
   }
   .active-item {
     color: $primary;
     font-weight: 700;
+    border-left: 3px solid $primary;
   }
+}
+.more {
+  display: none;
+}
+.filter-mobile {
+  display: none;
 }
 // footer
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #e5e5e5;
+  flex-wrap: wrap;
+  border-top: 3px solid #BBBBBB;
+  margin-left: 24px;
+  padding: 24px 24px 24px 0;
+
   .footer__menu {
     flex-basis: 50%;
     display: flex;
     margin-right: 20px;
     flex-direction: column;
   }
+  .footer__menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    order: 1;
+  }
 
   .footer__menu-items {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
   }
@@ -1007,29 +1086,40 @@ body {
   .footer__description {
     font-size: 14px;
     color: #999999;
-    margin-top: 24px;
     font-size: 14px;
     line-height: 17px;
+    width: 50%;
+    order: 3;
   }
 
   .footer__image {
     display: flex;
     max-height: 100px;
     flex-basis: 50%;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 50%;
+    order: 2;
+  }
+  .footer__image img {
+    max-width: 100%;
+    height: auto;
   }
   .active-menu a {
     color: $primary;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 739px) {
   .sidebar.sidebar--close .nav-links li .sub-menu {
     display: none;
   }
 
   .sidebar {
-    width: 78px;
+   width: 240px;
+    z-index: 999;
+    .nav-links {
+      overflow: hidden !important;
+    }
   }
 
   .sidebar.sidebar--close {
@@ -1048,4 +1138,151 @@ body {
   }
 }
 @media only screen and #{$media-screen-tablet} {
+  .sidebar.sidebar--close .nav-links li .sub-menu {
+    display: none;
+  }
+
+  .sidebar {
+    width: 240px;
+    z-index: 999;
+    .nav-links {
+      overflow: hidden !important;
+    }
+  }
+
+  .sidebar.sidebar--close {
+    width: 0;
+  }
+
+  .home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+    z-index: 100;
+  }
+
+  .sidebar.sidebar--close ~ .home-section {
+    width: 100%;
+    left: 0;
+  }
+
+  // header menu
+  .home-header {
+    background-color: #0c1245;
+    .bx-menu {
+      color: #FFFFFF !important;
+    }
+    .home-header__logo {
+      display: block !important;
+    }
+    .breadcrumbs {
+      display: none;
+    }
+    .home-header__icons {
+      .home-header__select-nation {
+        background-color: #0C1245;
+        color: #ffffff;
+      }
+      .home-content__search {
+        color: #FFFFFF;
+      }
+    }
+  }
+  .breadcrumbs-ipad {
+    display: block;
+    align-items: center;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    a{
+      text-decoration: none;
+      color: #111111;
+    }
+    span {
+      margin: 0 10px;
+    }
+  }
+  .tabs {
+    .tab-item {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .filter {
+    .filter__left {
+      max-width: 450px;
+      .filter__game {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+      }
+      .filter__reset-btn {
+        margin-top: 20px;
+        margin-left: 12px;
+      }
+    }
+    .filter__right {
+      height: 28px;
+    }
+  }
+  .show {
+    align-items: baseline;
+    .show__casino {
+      max-width: 480px;
+    }
+
+  }
+  .dunder {
+    .number-right,.perfect, .alert {
+      display: none !important;
+    }
+    .dealer__content-body {
+      .body__desc{
+        display: none;
+      }
+    }
+    .dealer__content_footer {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .unibet, .dafabet, .happistar {
+    .dunder-right {
+      display: none !important;
+    }
+    .body__desc {
+      display: none;
+    }
+    .dealer__content_footer {
+      padding-left: 10px;
+    }
+  }
+  .description {
+    flex-direction: column-reverse;
+    .description__menu {
+      justify-content: flex-start;
+      .menu-box {
+      max-width: 100%;
+      width: 100%;
+      padding-bottom: 12px;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .footer__menu-items {
+      order: 1;
+    }
+    .footer__description {
+      order: 3;
+      margin-top: 11px;
+    }
+    .footer__image {
+      order: 2;
+      margin-top: 17px;
+    }
+  }
 }
+

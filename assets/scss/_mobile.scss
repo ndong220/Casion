@@ -1,0 +1,260 @@
+@media only screen and #{$media-screen-mobile} {
+  //side bar
+  
+
+    .home-header {
+      background-color: #0c1245;
+      .bx-menu {
+        color: #FFFFFF !important;
+      }
+      .home-header__logo {
+        display: block !important;
+      }
+      .breadcrumbs {
+        display: none;
+      }
+      .home-header__icons {
+        .home-header__select-nation {
+          background-color: #0C1245;
+          color: #ffffff;
+        }
+        .home-content__search {
+          color: #FFFFFF;
+        }
+      }
+    }
+    .breadcrumbs-ipad {
+      display: block !important;
+      align-items: center;
+      font-size: 16px;
+      font-size: 16px;
+      line-height: 19px;
+      padding: 10px;
+      a{
+        text-decoration: none;
+        color: #111111;
+      }
+      span {
+        margin: 0 10px;
+      }
+    }
+    //title 
+    .title {
+      .title__text {
+        font-size: 20px !important;
+      }
+    }
+    // tab
+    .tabs {
+      overflow-x: scroll !important;
+      
+      .tabs__scroll {
+        display: flex;
+        .tab-item {
+          width: 175px !important;
+          height: 44px !important;
+          padding: 10px 0 10px !important;
+        }
+      }
+      
+    }
+    // end tab
+  
+    //filter 
+    .filter {
+      display: none !important;
+    }
+    .show{
+      margin-top: 10px !important;
+      .show__sort {
+        display: none;
+      }
+    }
+    //
+    .dealer {
+      margin-top: 20px !important;
+      justify-content: center !important;
+    }
+    .dunder , .unibet , .dafabet {
+        
+        .dealer__background {
+            display: none;
+        }
+       
+        .dealer__content {
+            // max-width: 351px;
+            width: 100%;
+            .dunder-title {
+                font-size: 20px !important;
+                display: flex;
+                gap: 5px;
+                img {
+                  display: block !important;
+                }
+
+            }
+            .ratting {
+              display: flex !important;
+              padding-right: 10px;
+            }
+            .dealer__content-header {
+                border: none;
+                .featured-right {
+                    display: none !important;
+                }
+            }
+            .dealer__content-body {
+                flex-direction: column;
+                .body__desc {
+                    display: none;
+                }
+                .body__gift {
+                    max-width: 327px;
+                    width: 100%;
+                    margin: 0 auto;
+                    position: relative;
+                    .gift-box {
+                        display: none;
+                    }
+                    .sale-box {
+                        border-radius: 12px 0px;
+                        left: -2px;
+                    }
+                    .apply {
+                        position: absolute;
+                        top: -17px;
+                        left: 70%;
+                    }
+                }
+            }
+            .dealer__content_footer {
+                padding-right: 16px;
+                .visit-casino::before {
+                  content: "Visit";
+              }
+              .visit-casino::after {
+                  content: " ";
+                  display: inline-block;
+              }
+            }
+            
+        }
+    }
+    .happistar {
+      display: none !important;
+    }
+
+    .btn-show {
+        max-width: 351px !important;
+        width: 100%;
+    }
+    .pagination {
+        flex-direction: column !important;
+        gap: 12px;
+        align-items: inherit !important;
+        .pagination__page-index {
+            text-align: center;
+        }
+        .pagination__pagesize {
+            display: none !important;
+        }
+        .pagination__btn {
+            display: flex !important;
+            justify-content: space-between;
+            gap: 14px;
+            cursor: pointer;
+            .pagination__btn--pre, .pagination__btn--next {
+                width: 170px;
+                height: 40px;
+                border-radius: 6px;
+                border: none;
+                background: #C3CFEA;
+                color: #7085B5;
+            }
+            .pagination__active {
+                background: #1E60E1;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .description {
+      // margin: 10px !important;
+        .description__menu {
+            display: none !important;
+        }
+        .description__word {
+            flex-basis: 100% !important;
+            .title-one, .title-two , .title-three, .title-foure, .title-five ,.title-six, .title-seven {
+              font-size: 18px;
+              margin-top: 0 !important;
+            }
+            .desciption__title-one {
+              cursor: pointer;
+              i{
+                display: flex !important;
+                color: $primary;
+              }
+            } 
+            
+            .desc {
+              margin-bottom: 10px;
+              box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+              padding: 10px 0 !important;
+              &:first-child {
+                border-top: 1px solid red !important;
+              }
+            }
+        }
+        .title-one__one {
+          display: none;
+        }
+        
+        .is-hidden {
+          display: block;
+        }
+        
+    }
+    .more {
+      display: block !important;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid #BBBBBB !important;
+      border-bottom: 3px solid #BBBBBB !important;
+      button {
+        border: none;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        background-color: #e5e5e5;
+        i {
+          color: $primary;
+        }
+      }
+    }
+    .filter-mobile {
+      display: flex !important;
+      margin-top: 16px;
+      justify-content: space-around;
+      background: #FFFFFF;
+      box-shadow: inset 0px 1px 0px #EEEEEE;
+      .filter-mobile__item {
+        display: flex;
+        flex-direction: row;
+        padding: 13px 0;
+        cursor: pointer;
+        p {
+          font-weight: 700;
+        }
+      }
+    }
+    .footer {
+      display: none !important;
+      padding-left: 24px !important;
+      margin-left: 0 !important;
+      flex-direction: column;
+      .footer__menu-wrapper , .footer__image, .footer__description{
+        width: 100% !important;
+        margin-bottom: 10px;
+      }
+    }
+  }

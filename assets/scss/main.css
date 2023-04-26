@@ -27,42 +27,286 @@ button {
   box-sizing: border-box;
 }
 
-mt-20 {
+.mt-20 {
   margin-top: 20px;
 }
 
-mt-30 {
+.mt-30 {
   margin-top: 30px;
 }
 
-mb-10 {
+.mb-10 {
   margin-bottom: 10px;
 }
 
-p-20 {
+.p-20 {
   padding: 20px;
 }
 
-pl-20 {
+.pl-20 {
   padding-left: 20px;
 }
 
-m-20 {
+.m-20 {
   margin: 20px;
 }
 
-font-size-16 {
+.font-size-16 {
   font-style: 16px;
 }
 
-radius-6 {
+.radius-6 {
   border-radius: 6px;
 }
 
-line-24 {
+.line-24 {
   line-height: 24px;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
+.d-flex {
+  display: flex !important;
+  align-items: baseline;
+}
+
+.br-t {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (max-width: 739px) {
+  .home-header {
+    background-color: #0c1245;
+  }
+  .home-header .bx-menu {
+    color: #FFFFFF !important;
+  }
+  .home-header .home-header__logo {
+    display: block !important;
+  }
+  .home-header .breadcrumbs {
+    display: none;
+  }
+  .home-header .home-header__icons .home-header__select-nation {
+    background-color: #0C1245;
+    color: #ffffff;
+  }
+  .home-header .home-header__icons .home-content__search {
+    color: #FFFFFF;
+  }
+  .breadcrumbs-ipad {
+    display: block !important;
+    align-items: center;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+  }
+  .breadcrumbs-ipad a {
+    text-decoration: none;
+    color: #111111;
+  }
+  .breadcrumbs-ipad span {
+    margin: 0 10px;
+  }
+  .title .title__text {
+    font-size: 20px !important;
+  }
+  .tabs {
+    overflow-x: scroll !important;
+  }
+  .tabs .tabs__scroll {
+    display: flex;
+  }
+  .tabs .tabs__scroll .tab-item {
+    width: 175px !important;
+    height: 44px !important;
+    padding: 10px 0 10px !important;
+  }
+  .filter {
+    display: none !important;
+  }
+  .show {
+    margin-top: 10px !important;
+  }
+  .show .show__sort {
+    display: none;
+  }
+  .dealer {
+    margin-top: 20px !important;
+    justify-content: center !important;
+  }
+  .dunder .dealer__background, .unibet .dealer__background, .dafabet .dealer__background {
+    display: none;
+  }
+  .dunder .dealer__content, .unibet .dealer__content, .dafabet .dealer__content {
+    width: 100%;
+  }
+  .dunder .dealer__content .dunder-title, .unibet .dealer__content .dunder-title, .dafabet .dealer__content .dunder-title {
+    font-size: 20px !important;
+    display: flex;
+    gap: 5px;
+  }
+  .dunder .dealer__content .dunder-title img, .unibet .dealer__content .dunder-title img, .dafabet .dealer__content .dunder-title img {
+    display: block !important;
+  }
+  .dunder .dealer__content .ratting, .unibet .dealer__content .ratting, .dafabet .dealer__content .ratting {
+    display: flex !important;
+    padding-right: 10px;
+  }
+  .dunder .dealer__content .dealer__content-header, .unibet .dealer__content .dealer__content-header, .dafabet .dealer__content .dealer__content-header {
+    border: none;
+  }
+  .dunder .dealer__content .dealer__content-header .featured-right, .unibet .dealer__content .dealer__content-header .featured-right, .dafabet .dealer__content .dealer__content-header .featured-right {
+    display: none !important;
+  }
+  .dunder .dealer__content .dealer__content-body, .unibet .dealer__content .dealer__content-body, .dafabet .dealer__content .dealer__content-body {
+    flex-direction: column;
+  }
+  .dunder .dealer__content .dealer__content-body .body__desc, .unibet .dealer__content .dealer__content-body .body__desc, .dafabet .dealer__content .dealer__content-body .body__desc {
+    display: none;
+  }
+  .dunder .dealer__content .dealer__content-body .body__gift, .unibet .dealer__content .dealer__content-body .body__gift, .dafabet .dealer__content .dealer__content-body .body__gift {
+    max-width: 327px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .dunder .dealer__content .dealer__content-body .body__gift .gift-box, .unibet .dealer__content .dealer__content-body .body__gift .gift-box, .dafabet .dealer__content .dealer__content-body .body__gift .gift-box {
+    display: none;
+  }
+  .dunder .dealer__content .dealer__content-body .body__gift .sale-box, .unibet .dealer__content .dealer__content-body .body__gift .sale-box, .dafabet .dealer__content .dealer__content-body .body__gift .sale-box {
+    border-radius: 12px 0px;
+    left: -2px;
+  }
+  .dunder .dealer__content .dealer__content-body .body__gift .apply, .unibet .dealer__content .dealer__content-body .body__gift .apply, .dafabet .dealer__content .dealer__content-body .body__gift .apply {
+    position: absolute;
+    top: -17px;
+    left: 70%;
+  }
+  .dunder .dealer__content .dealer__content_footer, .unibet .dealer__content .dealer__content_footer, .dafabet .dealer__content .dealer__content_footer {
+    padding-right: 16px;
+  }
+  .dunder .dealer__content .dealer__content_footer .visit-casino::before, .unibet .dealer__content .dealer__content_footer .visit-casino::before, .dafabet .dealer__content .dealer__content_footer .visit-casino::before {
+    content: "Visit";
+  }
+  .dunder .dealer__content .dealer__content_footer .visit-casino::after, .unibet .dealer__content .dealer__content_footer .visit-casino::after, .dafabet .dealer__content .dealer__content_footer .visit-casino::after {
+    content: " ";
+    display: inline-block;
+  }
+  .happistar {
+    display: none !important;
+  }
+  .btn-show {
+    max-width: 351px !important;
+    width: 100%;
+  }
+  .pagination {
+    flex-direction: column !important;
+    gap: 12px;
+    align-items: inherit !important;
+  }
+  .pagination .pagination__page-index {
+    text-align: center;
+  }
+  .pagination .pagination__pagesize {
+    display: none !important;
+  }
+  .pagination .pagination__btn {
+    display: flex !important;
+    justify-content: space-between;
+    gap: 14px;
+    cursor: pointer;
+  }
+  .pagination .pagination__btn .pagination__btn--pre, .pagination .pagination__btn .pagination__btn--next {
+    width: 170px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background: #C3CFEA;
+    color: #7085B5;
+  }
+  .pagination .pagination__btn .pagination__active {
+    background: #1E60E1;
+    color: #FFFFFF;
+  }
+  .description .description__menu {
+    display: none !important;
+  }
+  .description .description__word {
+    flex-basis: 100% !important;
+  }
+  .description .description__word .title-one, .description .description__word .title-two, .description .description__word .title-three, .description .description__word .title-foure, .description .description__word .title-five, .description .description__word .title-six, .description .description__word .title-seven {
+    font-size: 18px;
+    margin-top: 0 !important;
+  }
+  .description .description__word .desciption__title-one {
+    cursor: pointer;
+  }
+  .description .description__word .desciption__title-one i {
+    display: flex !important;
+    color: #1E60E1;
+  }
+  .description .description__word .desc {
+    margin-bottom: 10px;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+    padding: 10px 0 !important;
+  }
+  .description .description__word .desc:first-child {
+    border-top: 1px solid red !important;
+  }
+  .description .title-one__one {
+    display: none;
+  }
+  .description .is-hidden {
+    display: block;
+  }
+  .more {
+    display: block !important;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #BBBBBB !important;
+    border-bottom: 3px solid #BBBBBB !important;
+  }
+  .more button {
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #e5e5e5;
+  }
+  .more button i {
+    color: #1E60E1;
+  }
+  .filter-mobile {
+    display: flex !important;
+    margin-top: 16px;
+    justify-content: space-around;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 0px #EEEEEE;
+  }
+  .filter-mobile .filter-mobile__item {
+    display: flex;
+    flex-direction: row;
+    padding: 13px 0;
+    cursor: pointer;
+  }
+  .filter-mobile .filter-mobile__item p {
+    font-weight: 700;
+  }
+  .footer {
+    display: none !important;
+    padding-left: 24px !important;
+    margin-left: 0 !important;
+    flex-direction: column;
+  }
+  .footer .footer__menu-wrapper, .footer .footer__image, .footer .footer__description {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}
 body {
   font-family: "lato";
   color: #111111;
@@ -77,6 +321,14 @@ body {
   background: #0c1245;
   z-index: 100;
   transition: all 0.5s ease;
+}
+.sidebar .sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.sidebar .sidebar.sidebar--close .close-btn {
+  display: none;
 }
 
 .sidebar.sidebar--close {
@@ -277,6 +529,9 @@ body {
   color: #1e60e1;
   font-size: 35px;
 }
+.home-section .home-header .home-header__logo {
+  display: none;
+}
 
 .home-section .home-header .bx-menu {
   margin: 0 15px;
@@ -332,6 +587,10 @@ body {
   display: flex;
 }
 
+.breadcrumbs-ipad {
+  display: none;
+}
+
 .title {
   margin: 10px;
   padding: 10px;
@@ -362,8 +621,10 @@ body {
   background-color: #1E60E1;
   transition: all 0.2s ease;
 }
-.tabs .tab-item {
-  min-width: 80px;
+.tabs .tabs__scroll {
+  display: flex;
+}
+.tabs .tabs__scroll .tab-item {
   padding: 16px 20px 11px 20px;
   margin-right: 10px;
   font-weight: 700;
@@ -376,19 +637,21 @@ body {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.tabs .tab-item .tab-icon {
+.tabs .tabs__scroll .tab-item .tab-icon {
   font-size: 24px;
   width: 32px;
   position: relative;
   top: 2px;
 }
-.tabs .tab-item:hover {
+.tabs .tabs__scroll .tab-item:hover {
   opacity: 1;
   background-color: rgba(194, 53, 100, 0.05);
   border-color: rgba(194, 53, 100, 0.1);
 }
-.tabs .tab-item.active {
+.tabs .tabs__scroll .tab-item.active {
   opacity: 1;
+  background-color: #1E60E1;
+  color: #FFFFFF;
 }
 
 .tab-content {
@@ -451,6 +714,7 @@ body {
 .filter .filter__left {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .filter .filter__left span {
   border: 1px solid #dddddd;
@@ -567,6 +831,12 @@ body {
 }
 .dealer .dealer__content-header .dunder-title span {
   color: #1E60E1;
+}
+.dealer .dealer__content-header .dunder-title img {
+  display: none;
+}
+.dealer .dealer__content-header .ratting {
+  display: none;
 }
 .dealer .dealer__content-header .dunder-right {
   margin: 0 10px;
@@ -686,6 +956,7 @@ body {
 }
 .dealer .dealer__content-body .gift__color-yellow {
   border: 5px solid #f6bf31;
+  max-height: -webkit-fill-available;
 }
 .dealer .dealer__content-body .gift__color-yellow p {
   color: #0c1245;
@@ -715,6 +986,13 @@ body {
   border: none;
   color: #ffffff;
   font-weight: 700;
+}
+.dealer .dealer__content_footer .visit-casino::before {
+  content: "Visit Casino";
+}
+.dealer .dealer__content_footer .visit-casino::after {
+  content: "Visit";
+  display: none;
 }
 .dealer .dealer__content_footer .visit-review {
   width: 150px;
@@ -755,6 +1033,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+  align-items: center;
 }
 .dealer .left-desc ul {
   padding: 20px;
@@ -767,6 +1046,7 @@ body {
 }
 .dealer .right-desc p {
   display: flex;
+  align-items: center;
   color: #111111;
   font-weight: 700;
   font-size: 18px;
@@ -831,6 +1111,9 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
+.pagination .pagination__btn {
+  display: none;
+}
 
 .description {
   display: flex;
@@ -849,6 +1132,9 @@ body {
   word-break: break-word;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.description .description__word .desciption__title-one i {
+  display: none;
 }
 .description .description__word .desciption__line {
   margin-bottom: 25px;
@@ -892,6 +1178,8 @@ body {
   width: 100%;
   border: 1px solid #ccc;
   border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 10px;
 }
 .description .description__word .table .table__row {
   display: flex;
@@ -904,6 +1192,7 @@ body {
 .description .description__word .table .table__cell {
   border: 1px solid #ccc;
   padding: 10px;
+  min-width: 100px;
 }
 .description .description__word .table .table__cell--60 {
   flex-basis: 60%;
@@ -958,8 +1247,13 @@ body {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
 }
 .description .description__menu .menu-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 258px;
   max-height: 192px;
   width: 100%;
@@ -970,20 +1264,37 @@ body {
   top: 10px;
 }
 .description .description__menu .menu-box .menu-item {
-  padding: 15px 0 0 14px;
+  margin: 10px 0;
+  padding-left: 10px;
   cursor: pointer;
+}
+.description .description__menu .menu-box .menu-item:hover {
+  color: #1E60E1;
+  font-weight: 700;
 }
 .description .active-item {
   color: #1E60E1;
   font-weight: 700;
+  border-left: 3px solid #1E60E1;
+}
+
+.more {
+  display: none;
+}
+
+.filter-mobile {
+  display: none;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #e5e5e5;
+  flex-wrap: wrap;
+  border-top: 3px solid #BBBBBB;
+  margin-left: 24px;
+  padding: 24px 24px 24px 0;
 }
 .footer .footer__menu {
   flex-basis: 50%;
@@ -991,9 +1302,16 @@ body {
   margin-right: 20px;
   flex-direction: column;
 }
+.footer .footer__menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  order: 1;
+}
 .footer .footer__menu-items {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1012,26 +1330,37 @@ body {
 .footer .footer__description {
   font-size: 14px;
   color: #999999;
-  margin-top: 24px;
   font-size: 14px;
   line-height: 17px;
+  width: 50%;
+  order: 3;
 }
 .footer .footer__image {
   display: flex;
   max-height: 100px;
   flex-basis: 50%;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 50%;
+  order: 2;
+}
+.footer .footer__image img {
+  max-width: 100%;
+  height: auto;
 }
 .footer .active-menu a {
   color: #1E60E1;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 739px) {
   .sidebar.sidebar--close .nav-links li .sub-menu {
     display: none;
   }
   .sidebar {
-    width: 78px;
+    width: 240px;
+    z-index: 999;
+  }
+  .sidebar .nav-links {
+    overflow: hidden !important;
   }
   .sidebar.sidebar--close {
     width: 0;
@@ -1044,5 +1373,134 @@ body {
   .sidebar.sidebar--close ~ .home-section {
     width: 100%;
     left: 0;
+  }
+}
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .sidebar.sidebar--close .nav-links li .sub-menu {
+    display: none;
+  }
+  .sidebar {
+    width: 240px;
+    z-index: 999;
+  }
+  .sidebar .nav-links {
+    overflow: hidden !important;
+  }
+  .sidebar.sidebar--close {
+    width: 0;
+  }
+  .home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+    z-index: 100;
+  }
+  .sidebar.sidebar--close ~ .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .home-header {
+    background-color: #0c1245;
+  }
+  .home-header .bx-menu {
+    color: #FFFFFF !important;
+  }
+  .home-header .home-header__logo {
+    display: block !important;
+  }
+  .home-header .breadcrumbs {
+    display: none;
+  }
+  .home-header .home-header__icons .home-header__select-nation {
+    background-color: #0C1245;
+    color: #ffffff;
+  }
+  .home-header .home-header__icons .home-content__search {
+    color: #FFFFFF;
+  }
+  .breadcrumbs-ipad {
+    display: block;
+    align-items: center;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+  }
+  .breadcrumbs-ipad a {
+    text-decoration: none;
+    color: #111111;
+  }
+  .breadcrumbs-ipad span {
+    margin: 0 10px;
+  }
+  .tabs .tab-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .filter .filter__left {
+    max-width: 450px;
+  }
+  .filter .filter__left .filter__game {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .filter .filter__left .filter__reset-btn {
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+  .filter .filter__right {
+    height: 28px;
+  }
+  .show {
+    align-items: baseline;
+  }
+  .show .show__casino {
+    max-width: 480px;
+  }
+  .dunder .number-right, .dunder .perfect, .dunder .alert {
+    display: none !important;
+  }
+  .dunder .dealer__content-body .body__desc {
+    display: none;
+  }
+  .dunder .dealer__content_footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .unibet .dunder-right, .dafabet .dunder-right, .happistar .dunder-right {
+    display: none !important;
+  }
+  .unibet .body__desc, .dafabet .body__desc, .happistar .body__desc {
+    display: none;
+  }
+  .unibet .dealer__content_footer, .dafabet .dealer__content_footer, .happistar .dealer__content_footer {
+    padding-left: 10px;
+  }
+  .description {
+    flex-direction: column-reverse;
+  }
+  .description .description__menu {
+    justify-content: flex-start;
+  }
+  .description .description__menu .menu-box {
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  .footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer .footer__menu-items {
+    order: 1;
+  }
+  .footer .footer__description {
+    order: 3;
+    margin-top: 11px;
+  }
+  .footer .footer__image {
+    order: 2;
+    margin-top: 17px;
   }
 }/*# sourceMappingURL=main.css.map */
