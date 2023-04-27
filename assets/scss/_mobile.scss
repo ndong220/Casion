@@ -1,6 +1,5 @@
 @media only screen and #{$media-screen-mobile} {
   //side bar
-  
 
     .home-header {
       background-color: #0c1245;
@@ -8,6 +7,9 @@
         color: #FFFFFF !important;
       }
       .home-header__logo {
+        display: none !important;
+      }
+      .home-header__logo-mobile {
         display: block !important;
       }
       .breadcrumbs {
@@ -182,6 +184,9 @@
         .description__menu {
             display: none !important;
         }
+        .br-t{
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
         .description__word {
             flex-basis: 100% !important;
             .title-one, .title-two , .title-three, .title-foure, .title-five ,.title-six, .title-seven {

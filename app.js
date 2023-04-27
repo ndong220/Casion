@@ -1,44 +1,39 @@
-const arrow = document.querySelectorAll('.arrow');
-const sidebar = document.querySelector('.sidebar');
-const sidebarBtn = document.querySelector('.bx-menu');
-const logo = document.querySelector('.logo-details img');
-const body = document.querySelector('body');
-const mediaQuery = window.matchMedia('(max-width: 1023px), (max-width: 739px)');
+const arrow = document.querySelectorAll(".arrow");
+const sidebar = document.querySelector(".sidebar");
+const sidebarBtn = document.querySelector(".bx-menu");
+const logo = document.querySelector(".logo-details img");
+const body = document.querySelector("body");
+const mediaQuery = window.matchMedia("(max-width: 1023px), (max-width: 739px)");
 
 arrow.forEach((item) => {
-  item.addEventListener('click', (e) => {
+  item.addEventListener("click", (e) => {
     const arrowParent = e.target.parentElement.parentElement;
-    arrowParent.classList.toggle('showMenu');
-    logo.classList.toggle('small-logo');
+    arrowParent.classList.toggle("showMenu");
+    logo.classList.toggle("small-logo");
   });
 });
 
-sidebarBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('sidebar--close');
-  logo.classList.toggle('small-logo');
+sidebarBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("sidebar--close");
+  logo.classList.toggle("small-logo");
 });
 
 // xử lý sự kiện click ra ngoài chỉ khi độ phân giải màn hình nằm trong khoảng giá trị mong muốn
 if (mediaQuery.matches) {
-  body.addEventListener('click', (e) => {
+  body.addEventListener("click", (e) => {
     const screenWidth = window.innerWidth;
     if ((screenWidth >= 740 && screenWidth <= 1023) || screenWidth <= 739) {
       if (!sidebar.contains(e.target) && e.target !== sidebarBtn) {
-        sidebar.classList.add('sidebar--close');
-        logo.classList.add('small-logo');
+        sidebar.classList.add("sidebar--close");
+        logo.classList.add("small-logo");
       }
     }
-  });  
+  });
 }
-
-
-
 
 // xử lý khi đóng mở bên ngoài
 
-
-
-// hàm thay đổi các tab 
+// hàm thay đổi các tab
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -68,63 +63,64 @@ tabs.forEach((tab, index) => {
   };
 });
 
-
-
 // hàm show more show less
 var content = document.querySelector(".tab__show");
-      var expandBtn = document.querySelector(".expand-btn");
-      var collapseBtn = document.querySelector(".collapse-btn");
+var expandBtn = document.querySelector(".expand-btn");
+var collapseBtn = document.querySelector(".collapse-btn");
 
-      expandBtn.addEventListener("click", function () {
-        content.style.height = "auto";
-        collapseBtn.style.display = "block";
-        expandBtn.style.display = "none";
-        content.classList.remove("fadeout");
-      });
+expandBtn.addEventListener("click", function () {
+  content.style.height = "auto";
+  collapseBtn.style.display = "block";
+  expandBtn.style.display = "none";
+  content.classList.remove("fadeout");
+});
 
-      collapseBtn.addEventListener("click", function () {
-        content.style.height = "110px";
-        collapseBtn.style.display = "none";
-        expandBtn.style.display = "block";
-        content.classList.add("fadeout");
-      });
+collapseBtn.addEventListener("click", function () {
+  content.style.height = "110px";
+  collapseBtn.style.display = "none";
+  expandBtn.style.display = "block";
+  content.classList.add("fadeout");
+});
 
+window.onload = function () {
+  content.style.height = "110px";
+  collapseBtn.style.display = "none";
+  expandBtn.style.display = "block";
+};
 
-      window.onload = function () {
-        content.style.height = "110px";
-        collapseBtn.style.display = "none";
-        expandBtn.style.display = "block";
-      };
+// đóng mở
 
-      
-      // đóng mở 
-
-      function toggleViewAll(event) {
+function toggleViewAll(event) {
   const button = event.target;
   const isMobile = window.innerWidth <= 576; // kiểm tra nếu chiều rộng màn hình nhỏ hơn hoặc bằng 576px thì coi như là thiết bị mobile
-  const dealerContent = button.closest('.dealer__content');
-  const hiddenContent = dealerContent.querySelector('.dealer__content-hidden');
-  
-  if (window.getComputedStyle(hiddenContent).getPropertyValue('display') === "flex") {
+  const dealerContent = button.closest(".dealer__content");
+  const hiddenContent = dealerContent.querySelector(".dealer__content-hidden");
+
+  if (
+    window.getComputedStyle(hiddenContent).getPropertyValue("display") ===
+    "flex"
+  ) {
     hiddenContent.style.display = "none";
-    button.innerHTML = isMobile ? 'More <i class="fa-solid fa-chevron-down"></i>' : 'More Details <i class="fa-solid fa-chevron-down"></i>';
+    button.innerHTML = isMobile
+      ? 'More <i class="fa-solid fa-chevron-down"></i>'
+      : 'More Details <i class="fa-solid fa-chevron-down"></i>';
   } else {
     hiddenContent.style.display = "flex";
-    button.innerHTML = isMobile ? 'Less <i class="fa-sharp fa-solid fa-chevron-up"></i>' : 'Less Details <i class="fa-sharp fa-solid fa-chevron-up"></i>';
+    button.innerHTML = isMobile
+      ? 'Less <i class="fa-sharp fa-solid fa-chevron-up"></i>'
+      : 'Less Details <i class="fa-sharp fa-solid fa-chevron-up"></i>';
   }
 }
 
-const dealerContents = document.querySelectorAll('.dealer__content');
-dealerContents.forEach(content => {
-  const button = content.querySelector('.less-details');
-  button.addEventListener('click', toggleViewAll);
+const dealerContents = document.querySelectorAll(".dealer__content");
+dealerContents.forEach((content) => {
+  const button = content.querySelector(".less-details");
+  button.addEventListener("click", toggleViewAll);
 });
 
-      
-      
-// 
+//
 const questions = document.querySelectorAll(".question");
-questions.forEach(question => {
+questions.forEach((question) => {
   const title = question.querySelector(".question__title");
   const answer = question.querySelector(".question__answer");
   const icon = question.querySelector(".fa-solid");
@@ -142,48 +138,51 @@ questions.forEach(question => {
   });
 });
 
-
-// 
+//
 // lấy tất cả các menu item
-const menuItems = document.querySelectorAll('.menu-item');
+const menuItems = document.querySelectorAll(".menu-item");
 
 // Thêm lớp active-item vào phần tử đầu tiên trong danh sách menuItems để nó được kích hoạt mặc định
-menuItems[0].classList.add('active-item');
+menuItems[0].classList.add("active-item");
 
 // sử dụng intersection observer để phát hiện khi phần tử hiển thị trên màn hình
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // xóa lớp active khỏi tất cả các menu item
-      menuItems.forEach(item => item.classList.remove('active-item'));
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // xóa lớp active khỏi tất cả các menu item
+        menuItems.forEach((item) => item.classList.remove("active-item"));
 
-      // thêm lớp active cho menu item hiện tại
-      const currentMenuItem = document.querySelector(`.menu-item[data-id="${entry.target.id}"]`);
-      currentMenuItem.classList.add('active-item');
-    }
-  });
-}, { threshold: 0.5 });
+        // thêm lớp active cho menu item hiện tại
+        const currentMenuItem = document.querySelector(
+          `.menu-item[data-id="${entry.target.id}"]`
+        );
+        currentMenuItem.classList.add("active-item");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
 
 // theo dõi sự kiện cuộn trang và click trên menu item
-menuItems.forEach(item => {
-  const targetId = item.getAttribute('data-id');
+menuItems.forEach((item) => {
+  const targetId = item.getAttribute("data-id");
   const target = document.getElementById(targetId);
 
   // theo dõi sự kiện click của menu item
-  item.addEventListener('click', () => {
-    target.scrollIntoView({ behavior: 'smooth' });
-  })
+  item.addEventListener("click", () => {
+    target.scrollIntoView({ behavior: "smooth" });
+  });
 
   // theo dõi sự kiện cuộn trang
   observer.observe(target);
 });
 
-
 // Button pre next
 let activeButton = null;
 
-document.querySelectorAll(".btn-pagination").forEach(button => {
-  button.addEventListener("click", function() {
+document.querySelectorAll(".btn-pagination").forEach((button) => {
+  button.addEventListener("click", function () {
     if (activeButton === null) {
       this.classList.add("pagination__active");
       activeButton = this.id;
@@ -199,8 +198,7 @@ document.querySelectorAll(".btn-pagination").forEach(button => {
   });
 });
 
-
-//desc 
+//desc
 const titleOneButtons = document.querySelectorAll(".desciption__title-one");
 
 titleOneButtons.forEach((button) => {
@@ -218,9 +216,4 @@ titleOneButtons.forEach((button) => {
   });
 });
 
-
 //ẩn footer
-document.addEventListener('click', function() {
-  $('.sidebar').collapse('hide');
-});
-

@@ -72,10 +72,6 @@ button {
   align-items: baseline;
 }
 
-.br-t {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
 @media only screen and (max-width: 739px) {
   .home-header {
     background-color: #0c1245;
@@ -84,6 +80,9 @@ button {
     color: #FFFFFF !important;
   }
   .home-header .home-header__logo {
+    display: none !important;
+  }
+  .home-header .home-header__logo-mobile {
     display: block !important;
   }
   .home-header .breadcrumbs {
@@ -235,6 +234,9 @@ button {
   .description .description__menu {
     display: none !important;
   }
+  .description .br-t {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
   .description .description__word {
     flex-basis: 100% !important;
   }
@@ -330,38 +332,28 @@ body {
 .sidebar .sidebar.sidebar--close .close-btn {
   display: none;
 }
-
-.sidebar.sidebar--close {
-  width: 78px;
-}
-
-.sidebar .logo-details {
+.sidebar .sidebar__logo {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #193387 0%, #0b1144 100%);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  padding-bottom: 55px;
 }
-
-.sidebar .logo-details img {
+.sidebar .sidebar__logo img {
   max-width: 100%;
   max-height: 100%;
   padding: 20px;
 }
-
-.sidebar .logo-details.small-logo img {
+.sidebar .sidebar__logo .small-logo img {
   max-width: 50%;
   max-height: 50%;
   padding: 10px;
 }
 
-.sidebar .logo-details .logo_name {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.3s ease;
-  transition-delay: 0.1s;
+.sidebar.sidebar--close {
+  width: 78px;
 }
 
 .sidebar .nav-links {
@@ -493,19 +485,6 @@ body {
   display: block;
 }
 
-.sidebar .nav-links li .sub-menu.blank {
-  opacity: 1;
-  pointer-events: auto;
-  padding: 3px 20px 6px 16px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar .nav-links li:hover .sub-menu.blank {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .home-section {
   position: relative;
   background: #e5e5e5;
@@ -520,25 +499,24 @@ body {
   width: calc(100% - 78px);
 }
 
-.home-section .home-header {
+.home-header {
   height: 60px;
   display: flex;
   align-items: center;
 }
-.home-section .home-header .bx-menu {
+.home-header .bx-menu {
   color: #1e60e1;
   font-size: 35px;
-}
-.home-section .home-header .home-header__logo {
-  display: none;
-}
-
-.home-section .home-header .bx-menu {
   margin: 0 15px;
   cursor: pointer;
 }
-
-.breadcrumbs {
+.home-header .home-header__logo {
+  display: none;
+}
+.home-header .home-header__logo-mobile {
+  display: none;
+}
+.home-header .breadcrumbs {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -547,17 +525,14 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
-
-.breadcrumbs a {
+.home-header .breadcrumbs a {
   text-decoration: none;
   color: #111111;
 }
-
-.breadcrumbs span {
+.home-header .breadcrumbs span {
   margin: 0 10px;
 }
-
-.home-header__icons {
+.home-header .home-header__icons {
   display: flex;
   flex: 3;
   align-items: center;
@@ -567,10 +542,10 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-.home-header__icons i:hover {
+.home-header .home-header__icons i:hover {
   color: #1E60E1;
 }
-.home-header__icons .home-header__select-nation {
+.home-header .home-header__icons .home-header__select-nation {
   border: none;
   background-color: #e5e5e5;
   outline: none;
@@ -579,10 +554,10 @@ body {
   line-height: 22px;
   color: #0c1245;
 }
-.home-header__icons .home-header__search {
+.home-header .home-header__icons .home-header__search {
   padding: 5px;
 }
-.home-header__icons .home-header__language {
+.home-header .home-header__icons .home-header__language {
   margin: 0 10px;
   display: flex;
 }
@@ -600,6 +575,7 @@ body {
   font-weight: 700;
   font-size: 32px;
   color: #000000;
+  text-transform: uppercase;
 }
 .title .title__text--total {
   color: #1E60E1;
@@ -651,7 +627,7 @@ body {
 .tabs .tabs__scroll .tab-item.active {
   opacity: 1;
   background-color: #1E60E1;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .tab-content {
@@ -706,10 +682,6 @@ body {
   justify-content: space-between;
   margin: 20px;
   font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
 }
 .filter .filter__left {
   display: flex;
@@ -729,11 +701,8 @@ body {
 .filter .filter__reset-btn {
   border: 1px solid #1e60e1;
   border-radius: 6px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 19px;
-  padding: 5px;
+  padding: 3px;
   background-color: #ffffff;
   color: #1E60E1;
 }
@@ -815,37 +784,46 @@ body {
   background-color: #ffffff;
   height: auto;
 }
-.dealer .dealer__content-header {
+.dealer .dealer__content .dealer__content-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #e9ebee;
 }
-.dealer .dealer__content-header .dunder-title {
+.dealer .dealer__content .dealer__content-header .dunder-title,
+.dealer .dealer__content .dealer__content-header .unibet-title,
+.dealer .dealer__content .dealer__content-header .dafabet-title,
+.dealer .dealer__content .dealer__content-header .happistar-title {
   font-weight: 700;
   font-size: 28px;
   line-height: 41px;
   text-transform: uppercase;
   padding: 10px;
 }
-.dealer .dealer__content-header .dunder-title span {
+.dealer .dealer__content .dealer__content-header .dunder-title span,
+.dealer .dealer__content .dealer__content-header .unibet-title span,
+.dealer .dealer__content .dealer__content-header .dafabet-title span,
+.dealer .dealer__content .dealer__content-header .happistar-title span {
   color: #1E60E1;
 }
-.dealer .dealer__content-header .dunder-title img {
+.dealer .dealer__content .dealer__content-header .dunder-title img,
+.dealer .dealer__content .dealer__content-header .unibet-title img,
+.dealer .dealer__content .dealer__content-header .dafabet-title img,
+.dealer .dealer__content .dealer__content-header .happistar-title img {
   display: none;
 }
-.dealer .dealer__content-header .ratting {
+.dealer .dealer__content .dealer__content-header .ratting {
   display: none;
 }
-.dealer .dealer__content-header .dunder-right {
+.dealer .dealer__content .dealer__content-header .dunder-right {
   margin: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.dealer .dealer__content-header .dunder-right .featured-right {
+.dealer .dealer__content .dealer__content-header .dunder-right .featured-right {
   display: flex;
   align-items: center;
   border: none;
@@ -855,7 +833,7 @@ body {
   padding: 5px 12px;
   margin-right: 12px;
 }
-.dealer .dealer__content-header .dunder-right .number-right {
+.dealer .dealer__content .dealer__content-header .dunder-right .number-right {
   display: flex;
   align-items: center;
   border: none;
@@ -865,12 +843,12 @@ body {
   padding: 5px 12px;
   margin-right: 12px;
 }
-.dealer .dealer__content-header .dunder-right .perfect {
+.dealer .dealer__content .dealer__content-header .dunder-right .perfect {
   font-size: 14px;
   display: flex;
   align-items: center;
 }
-.dealer .dealer__content-header .dunder-right .perfect span {
+.dealer .dealer__content .dealer__content-header .dunder-right .perfect span {
   color: #76c344;
   font-weight: 700;
 }
@@ -1025,7 +1003,6 @@ body {
 .dealer .left-desc {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .dealer .left-desc p {
   display: flex;
@@ -1064,8 +1041,6 @@ body {
   text-align: center;
   background: #ffffff;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
   text-transform: uppercase;
   color: #1e60e1;
   margin: 25px auto;
@@ -1084,6 +1059,7 @@ body {
 .pagination .pagination__pagesize {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 .pagination .pagination__pagesize .page-number {
   width: 36px;
@@ -1098,7 +1074,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   cursor: pointer;
 }
 .pagination .pagination__pagesize .active {
@@ -1264,7 +1239,7 @@ body {
   top: 10px;
 }
 .description .description__menu .menu-box .menu-item {
-  margin: 10px 0;
+  margin: 5px 0;
   padding-left: 10px;
   cursor: pointer;
 }
@@ -1292,7 +1267,7 @@ body {
   align-items: center;
   background-color: #e5e5e5;
   flex-wrap: wrap;
-  border-top: 3px solid #BBBBBB;
+  border-top: 3px solid #bbbbbb;
   margin-left: 24px;
   padding: 24px 24px 24px 0;
 }
@@ -1351,13 +1326,14 @@ body {
   color: #1E60E1;
 }
 
-@media (max-width: 739px) {
+@media only screen and (max-width: 739px) {
   .sidebar.sidebar--close .nav-links li .sub-menu {
     display: none;
   }
   .sidebar {
     width: 240px;
     z-index: 999;
+    overflow: scroll;
   }
   .sidebar .nav-links {
     overflow: hidden !important;
@@ -1402,7 +1378,7 @@ body {
     background-color: #0c1245;
   }
   .home-header .bx-menu {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
   }
   .home-header .home-header__logo {
     display: block !important;
@@ -1411,11 +1387,11 @@ body {
     display: none;
   }
   .home-header .home-header__icons .home-header__select-nation {
-    background-color: #0C1245;
+    background-color: #0c1245;
     color: #ffffff;
   }
   .home-header .home-header__icons .home-content__search {
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .breadcrumbs-ipad {
     display: block;
@@ -1457,7 +1433,9 @@ body {
   .show .show__casino {
     max-width: 480px;
   }
-  .dunder .number-right, .dunder .perfect, .dunder .alert {
+  .dunder .number-right,
+  .dunder .perfect,
+  .dunder .alert {
     display: none !important;
   }
   .dunder .dealer__content-body .body__desc {
@@ -1467,13 +1445,19 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .unibet .dunder-right, .dafabet .dunder-right, .happistar .dunder-right {
+  .unibet .dunder-right,
+  .dafabet .dunder-right,
+  .happistar .dunder-right {
     display: none !important;
   }
-  .unibet .body__desc, .dafabet .body__desc, .happistar .body__desc {
+  .unibet .body__desc,
+  .dafabet .body__desc,
+  .happistar .body__desc {
     display: none;
   }
-  .unibet .dealer__content_footer, .dafabet .dealer__content_footer, .happistar .dealer__content_footer {
+  .unibet .dealer__content_footer,
+  .dafabet .dealer__content_footer,
+  .happistar .dealer__content_footer {
     padding-left: 10px;
   }
   .description {
@@ -1486,6 +1470,7 @@ body {
     max-width: 100%;
     width: 100%;
     padding-bottom: 12px;
+    padding-top: 12px;
   }
   .footer {
     display: flex;
