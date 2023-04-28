@@ -204,7 +204,7 @@ document.querySelectorAll(".btn-pagination").forEach((button) => {
   });
 });
 
-// close/open question 
+// close/open question
 const titleOneButtons = document.querySelectorAll(".desciption__title-one");
 titleOneButtons.forEach((button) => {
   const titleOne = button.nextElementSibling;

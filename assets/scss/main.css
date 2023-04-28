@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Oswald";
-  src: url("../fonts/Oswald/static/Oswald-Regular.ttf");
+  src: url("../fonts/Oswald/static/Oswald-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -796,6 +796,7 @@ body {
 .dealer .dealer__content .dealer__content-header .unibet-title,
 .dealer .dealer__content .dealer__content-header .dafabet-title,
 .dealer .dealer__content .dealer__content-header .happistar-title {
+  font-family: "Oswald";
   font-weight: 700;
   font-size: 28px;
   line-height: 41px;

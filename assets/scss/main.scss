@@ -7,7 +7,7 @@ $lato-font: url("../fonts/Lato-Regular.ttf");
   font-style: normal;
 }
 
-$Oswald-font: url("../fonts/Oswald/static/Oswald-Regular.ttf");
+$Oswald-font: url("../fonts/Oswald/static/Oswald-Medium.ttf");
 
 @font-face {
   font-family: "Oswald";
@@ -523,6 +523,7 @@ body {
       .unibet-title,
       .dafabet-title,
       .happistar-title {
+        font-family: "Oswald";
         font-weight: 700;
         font-size: 28px;
         line-height: 41px;
