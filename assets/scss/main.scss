@@ -254,7 +254,6 @@ body {
     justify-content: flex-end;
     margin-right: 10px;
     padding: 10px;
-    cursor: pointer;
     i:hover {
       color: $primary;
     }
@@ -262,7 +261,6 @@ body {
       border: none;
       background-color: #e5e5e5;
       outline: none;
-      cursor: pointer;
       font-size: 18px;
       line-height: 22px;
       color: #0c1245;
@@ -973,11 +971,6 @@ body {
         margin: 5px 0;
         padding-left: 10px;
         cursor: pointer;
-
-        &:hover {
-          color: $primary;
-          font-weight: 700;
-        }
       }
     }
   }
@@ -1133,7 +1126,7 @@ body {
     }
 
     .breadcrumbs {
-      display: none;
+      display: none ;
     }
     .home-header__icons {
       .home-header__select-nation {

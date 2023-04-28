@@ -1,7 +1,7 @@
 const arrow = document.querySelectorAll(".arrow");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtn = document.querySelector(".bx-menu");
-const logo = document.querySelector(".logo-details img");
+const logo = document.querySelector(".sidebar__logo img");
 const body = document.querySelector("body");
 const mediaQuery = window.matchMedia("(max-width: 1023px), (max-width: 739px)");
 
@@ -31,7 +31,6 @@ if (mediaQuery.matches) {
   });
 }
 
-// xử lý khi đóng mở bên ngoài
 
 // hàm thay đổi các tab
 const $ = document.querySelector.bind(document);
@@ -64,9 +63,9 @@ tabs.forEach((tab, index) => {
 });
 
 // hàm show more show less
-var content = document.querySelector(".tab__show");
-var expandBtn = document.querySelector(".expand-btn");
-var collapseBtn = document.querySelector(".collapse-btn");
+const content = document.querySelector(".tab__show");
+const expandBtn = document.querySelector(".expand-btn");
+const collapseBtn = document.querySelector(".collapse-btn");
 
 expandBtn.addEventListener("click", function () {
   content.style.height = "auto";
@@ -91,8 +90,8 @@ window.onload = function () {
 // đóng mở
 
 function toggleViewAll(event) {
-  const button = event.target;
-  const isMobile = window.innerWidth <= 576; // kiểm tra nếu chiều rộng màn hình nhỏ hơn hoặc bằng 576px thì coi như là thiết bị mobile
+  const button = event.currentTarget;
+  const isMobile = window.innerWidth <= 576;
   const dealerContent = button.closest(".dealer__content");
   const hiddenContent = dealerContent.querySelector(".dealer__content-hidden");
 
@@ -112,13 +111,17 @@ function toggleViewAll(event) {
   }
 }
 
-const dealerContents = document.querySelectorAll(".dealer__content");
-dealerContents.forEach((content) => {
-  const button = content.querySelector(".less-details");
-  button.addEventListener("click", toggleViewAll);
+document.addEventListener("DOMContentLoaded", function() {
+  const lessDetailsButtons = document.querySelectorAll(".less-details");
+
+  lessDetailsButtons.forEach((button) => {
+    button.addEventListener("click", toggleViewAll);
+  });
 });
 
-//
+
+
+// Question opening and closing function
 const questions = document.querySelectorAll(".question");
 questions.forEach((question) => {
   const title = question.querySelector(".question__title");
@@ -138,8 +141,9 @@ questions.forEach((question) => {
   });
 });
 
-//
-// lấy tất cả các menu item
+
+
+// Function to handle page scroll and menu selection
 const menuItems = document.querySelectorAll(".menu-item");
 
 // Thêm lớp active-item vào phần tử đầu tiên trong danh sách menuItems để nó được kích hoạt mặc định
@@ -178,6 +182,8 @@ menuItems.forEach((item) => {
   observer.observe(target);
 });
 
+
+
 // Button pre next
 let activeButton = null;
 
@@ -198,9 +204,8 @@ document.querySelectorAll(".btn-pagination").forEach((button) => {
   });
 });
 
-//desc
+// close/open question 
 const titleOneButtons = document.querySelectorAll(".desciption__title-one");
-
 titleOneButtons.forEach((button) => {
   const titleOne = button.nextElementSibling;
 
@@ -216,4 +221,4 @@ titleOneButtons.forEach((button) => {
   });
 });
 
-//ẩn footer
+

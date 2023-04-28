@@ -13,12 +13,12 @@
         display: block !important;
       }
       .breadcrumbs {
-        display: none;
+        display: none !important;
       }
       .home-header__icons {
         .home-header__select-nation {
-          background-color: #0C1245;
-          color: #ffffff;
+          background-color: #0C1245 !important;
+          color: #ffffff !important;
         }
         .home-content__search {
           color: #FFFFFF;
@@ -86,7 +86,7 @@
         .dealer__content {
             // max-width: 351px;
             width: 100%;
-            .dunder-title {
+            .dunder-title ,.unibet-title ,.dafabet-title ,.happistar-title {
                 font-size: 20px !important;
                 display: flex;
                 gap: 5px;
@@ -100,10 +100,11 @@
               padding-right: 10px;
             }
             .dealer__content-header {
-                border: none;
+                border: none !important;
                 .featured-right {
                     display: none !important;
                 }
+                
             }
             .dealer__content-body {
                 flex-direction: column;
@@ -129,6 +130,7 @@
                     }
                 }
             }
+            
             .dealer__content_footer {
                 padding-right: 16px;
                 .visit-casino::before {
@@ -137,6 +139,9 @@
               .visit-casino::after {
                   content: " ";
                   display: inline-block;
+              }
+              .details {
+                display: none !important;
               }
             }
             

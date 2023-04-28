@@ -86,11 +86,11 @@ button {
     display: block !important;
   }
   .home-header .breadcrumbs {
-    display: none;
+    display: none !important;
   }
   .home-header .home-header__icons .home-header__select-nation {
-    background-color: #0C1245;
-    color: #ffffff;
+    background-color: #0C1245 !important;
+    color: #ffffff !important;
   }
   .home-header .home-header__icons .home-content__search {
     color: #FFFFFF;
@@ -143,12 +143,12 @@ button {
   .dunder .dealer__content, .unibet .dealer__content, .dafabet .dealer__content {
     width: 100%;
   }
-  .dunder .dealer__content .dunder-title, .unibet .dealer__content .dunder-title, .dafabet .dealer__content .dunder-title {
+  .dunder .dealer__content .dunder-title, .dunder .dealer__content .unibet-title, .dunder .dealer__content .dafabet-title, .dunder .dealer__content .happistar-title, .unibet .dealer__content .dunder-title, .unibet .dealer__content .unibet-title, .unibet .dealer__content .dafabet-title, .unibet .dealer__content .happistar-title, .dafabet .dealer__content .dunder-title, .dafabet .dealer__content .unibet-title, .dafabet .dealer__content .dafabet-title, .dafabet .dealer__content .happistar-title {
     font-size: 20px !important;
     display: flex;
     gap: 5px;
   }
-  .dunder .dealer__content .dunder-title img, .unibet .dealer__content .dunder-title img, .dafabet .dealer__content .dunder-title img {
+  .dunder .dealer__content .dunder-title img, .dunder .dealer__content .unibet-title img, .dunder .dealer__content .dafabet-title img, .dunder .dealer__content .happistar-title img, .unibet .dealer__content .dunder-title img, .unibet .dealer__content .unibet-title img, .unibet .dealer__content .dafabet-title img, .unibet .dealer__content .happistar-title img, .dafabet .dealer__content .dunder-title img, .dafabet .dealer__content .unibet-title img, .dafabet .dealer__content .dafabet-title img, .dafabet .dealer__content .happistar-title img {
     display: block !important;
   }
   .dunder .dealer__content .ratting, .unibet .dealer__content .ratting, .dafabet .dealer__content .ratting {
@@ -156,7 +156,7 @@ button {
     padding-right: 10px;
   }
   .dunder .dealer__content .dealer__content-header, .unibet .dealer__content .dealer__content-header, .dafabet .dealer__content .dealer__content-header {
-    border: none;
+    border: none !important;
   }
   .dunder .dealer__content .dealer__content-header .featured-right, .unibet .dealer__content .dealer__content-header .featured-right, .dafabet .dealer__content .dealer__content-header .featured-right {
     display: none !important;
@@ -194,6 +194,9 @@ button {
   .dunder .dealer__content .dealer__content_footer .visit-casino::after, .unibet .dealer__content .dealer__content_footer .visit-casino::after, .dafabet .dealer__content .dealer__content_footer .visit-casino::after {
     content: " ";
     display: inline-block;
+  }
+  .dunder .dealer__content .dealer__content_footer .details, .unibet .dealer__content .dealer__content_footer .details, .dafabet .dealer__content .dealer__content_footer .details {
+    display: none !important;
   }
   .happistar {
     display: none !important;
@@ -540,7 +543,6 @@ body {
   justify-content: flex-end;
   margin-right: 10px;
   padding: 10px;
-  cursor: pointer;
 }
 .home-header .home-header__icons i:hover {
   color: #1E60E1;
@@ -549,7 +551,6 @@ body {
   border: none;
   background-color: #e5e5e5;
   outline: none;
-  cursor: pointer;
   font-size: 18px;
   line-height: 22px;
   color: #0c1245;
@@ -1242,10 +1243,6 @@ body {
   margin: 5px 0;
   padding-left: 10px;
   cursor: pointer;
-}
-.description .description__menu .menu-box .menu-item:hover {
-  color: #1E60E1;
-  font-weight: 700;
 }
 .description .active-item {
   color: #1E60E1;
