@@ -1,3 +1,4 @@
+// Hàm xử lý đóng mở sidebar
 const arrow = document.querySelectorAll(".arrow");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtn = document.querySelector(".bx-menu");
@@ -12,12 +13,10 @@ arrow.forEach((item) => {
     logo.classList.toggle("small-logo");
   });
 });
-
 sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar--close");
   logo.classList.toggle("small-logo");
 });
-
 // xử lý sự kiện click ra ngoài chỉ khi độ phân giải màn hình nằm trong khoảng giá trị mong muốn
 if (mediaQuery.matches) {
   body.addEventListener("click", (e) => {
@@ -30,6 +29,8 @@ if (mediaQuery.matches) {
     }
   });
 }
+
+
 
 
 // hàm thay đổi các tab
@@ -62,7 +63,9 @@ tabs.forEach((tab, index) => {
   };
 });
 
-// hàm show more show less
+
+
+// hàm show more, show less nội dung văn bản
 const content = document.querySelector(".tab__show");
 const expandBtn = document.querySelector(".expand-btn");
 const collapseBtn = document.querySelector(".collapse-btn");
@@ -87,8 +90,9 @@ window.onload = function () {
   expandBtn.style.display = "block";
 };
 
-// đóng mở
 
+
+// đóng mở nội dung trong các thẻ 
 function toggleViewAll(event) {
   const button = event.currentTarget;
   const isMobile = window.innerWidth <= 576;
@@ -110,7 +114,6 @@ function toggleViewAll(event) {
       : 'Less Details <i class="fa-sharp fa-solid fa-chevron-up"></i>';
   }
 }
-
 document.addEventListener("DOMContentLoaded", function() {
   const lessDetailsButtons = document.querySelectorAll(".less-details");
 
@@ -121,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Question opening and closing function
+// hàm mở và đóng câu hỏi
 const questions = document.querySelectorAll(".question");
 questions.forEach((question) => {
   const title = question.querySelector(".question__title");
@@ -143,10 +146,10 @@ questions.forEach((question) => {
 
 
 
-// Function to handle page scroll and menu selection
+// Hàm xử lý cuộn trang và chọn menu
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Thêm lớp active-item vào phần tử đầu tiên trong danh sách menuItems để nó được kích hoạt mặc định
+// Thêm class active-item vào phần tử đầu tiên trong danh sách menuItems để nó được kích hoạt mặc định
 menuItems[0].classList.add("active-item");
 
 // sử dụng intersection observer để phát hiện khi phần tử hiển thị trên màn hình
@@ -168,7 +171,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-// theo dõi sự kiện cuộn trang và click trên menu item
+// cuộn trang và click trên menu item
 menuItems.forEach((item) => {
   const targetId = item.getAttribute("data-id");
   const target = document.getElementById(targetId);
@@ -176,17 +179,16 @@ menuItems.forEach((item) => {
   // theo dõi sự kiện click của menu item
   item.addEventListener("click", () => {
     target.scrollIntoView({ behavior: "smooth" });
+    //Khi phần tử item được nhấp chuột, trang web sẽ cuộn đến phần tử có id là target và áp dụng hiệu ứng smooth (mượt mà) khi cuộn.
   });
 
-  // theo dõi sự kiện cuộn trang
   observer.observe(target);
 });
 
 
 
-// Button pre next
+// active màu btn next và pre trên mobile
 let activeButton = null;
-
 document.querySelectorAll(".btn-pagination").forEach((button) => {
   button.addEventListener("click", function () {
     if (activeButton === null) {
@@ -197,14 +199,14 @@ document.querySelectorAll(".btn-pagination").forEach((button) => {
       this.classList.add("pagination__active");
       activeButton = this.id;
     } else {
-      // remove active class from currently active button when clicked again
       this.classList.remove("pagination__active");
       activeButton = null;
     }
   });
 });
 
-// close/open question
+
+// Đóng mở câu hỏi
 const titleOneButtons = document.querySelectorAll(".desciption__title-one");
 titleOneButtons.forEach((button) => {
   const titleOne = button.nextElementSibling;

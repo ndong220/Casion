@@ -291,6 +291,9 @@ body {
   .title__text--total {
     color: $primary;
   }
+  .title__text--mobile {
+    display: none;
+  }
 }
 // End title
 
@@ -357,11 +360,6 @@ body {
     &.active {
       display: block;
     }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
   }
 
   .tab__show {
@@ -408,7 +406,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-  font-family: "Lato";
   .filter__left {
     display: flex;
     align-items: center;
@@ -437,7 +434,6 @@ body {
     align-items: center;
     border: none;
     border-radius: 6px;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -476,6 +472,8 @@ body {
     height: 32px;
     width: 169px;
     background-color: #ffffff;
+    font-size: 16px;
+    font-family: "lato",sans-serif;
   }
   span {
     font-weight: 700;
@@ -523,7 +521,7 @@ body {
       .unibet-title,
       .dafabet-title,
       .happistar-title {
-        font-family: "Oswald";
+        font-family: "Oswald",sans-serif;
         font-weight: 700;
         font-size: 28px;
         line-height: 41px;
@@ -533,6 +531,9 @@ body {
           color: $primary;
         }
         img {
+          display: none;
+        }
+        .title-mobile {
           display: none;
         }
       }
@@ -1234,6 +1235,7 @@ body {
     .footer__description {
       order: 3;
       margin-top: 11px;
+      width: 100%;
     }
     .footer__image {
       order: 2;

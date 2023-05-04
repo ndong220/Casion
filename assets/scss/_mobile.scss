@@ -1,6 +1,5 @@
 @media only screen and #{$media-screen-mobile} {
   //side bar
-
     .home-header {
       background-color: #0c1245;
       .bx-menu {
@@ -28,8 +27,7 @@
     .breadcrumbs-ipad {
       display: block !important;
       align-items: center;
-      font-size: 16px;
-      font-size: 16px;
+      font-size: 16px; 
       line-height: 19px;
       padding: 10px;
       a{
@@ -44,6 +42,13 @@
     .title {
       .title__text {
         font-size: 20px !important;
+      }
+      .title__text--mobile {
+        display: inline !important;
+        color: $primary;
+      }
+      .title__text--total {
+        display: none;
       }
     }
     // tab
@@ -92,6 +97,14 @@
                 gap: 5px;
                 img {
                   display: block !important;
+                }
+                .title-mobile {
+                  display: block !important;
+                  font-family: "Oswald",sans-serif;
+                  font-weight: 700;
+                  font-size: 20px;
+                  text-transform: uppercase;
+                  color: $textColor !important;
                 }
 
             }
@@ -197,9 +210,11 @@
             .title-one, .title-two , .title-three, .title-foure, .title-five ,.title-six, .title-seven {
               font-size: 18px;
               margin-top: 0 !important;
+              padding-right: 10px;
             }
             .desciption__title-one {
               cursor: pointer;
+              justify-content: space-between;
               i{
                 display: flex !important;
                 color: $primary;
@@ -255,6 +270,11 @@
         p {
           font-weight: 700;
         }
+      }
+      .filter-mobile__seperate {
+        display: flex;
+       align-items: center;
+       color: #EEEEEE;
       }
     }
     .footer {
