@@ -1474,7 +1474,8 @@ body {
 .description .description__word .title-two,
 .description .description__word .title-three,
 .description .description__word .title-foure,
-.description .description__word .title-five.title-six,
+.description .description__word .title-five,
+.description .description__word .title-six,
 .description .description__word .title-seven {
   margin-top: 30px;
   margin-bottom: 10px;

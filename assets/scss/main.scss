@@ -232,14 +232,14 @@ body {
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: #111111;
+    color: $textColor;
     font-weight: 400;
     line-height: 19px;
   }
 
   .breadcrumbs a {
     text-decoration: none;
-    color: #111111;
+    color: $textColor;
   }
 
   .breadcrumbs span {
@@ -322,7 +322,7 @@ body {
       font-weight: 700;
       font-size: 17px;
       text-align: center;
-      color: #111111;
+      color: $textColor;
       background-color: #fff;
       border-radius: 6px 6px 0 0;
       border-bottom: 5px solid transparent;
@@ -353,7 +353,7 @@ body {
   padding: 28px 25px;
 
   .tab-pane {
-    color: #111111;
+    color: $textColor;
     display: none;
 
     &.active {
@@ -731,7 +731,7 @@ body {
     flex-direction: column;
     p {
       display: flex;
-      color: #111111;
+      color: $textColor;
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
@@ -749,7 +749,7 @@ body {
     p {
       display: flex;
       align-items: center;
-      color: #111111;
+      color: $textColor;
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
@@ -844,7 +844,8 @@ body {
     .title-two,
     .title-three,
     .title-foure,
-    .title-five.title-six,
+    .title-five,
+    .title-six,
     .title-seven {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -1146,7 +1147,7 @@ body {
     padding: 10px;
     a {
       text-decoration: none;
-      color: #111111;
+      color: $textColor;
     }
     span {
       margin: 0 10px;
