@@ -22,7 +22,7 @@ $Oswald-font: url("../fonts/Oswald/static/Oswald-Medium.ttf");
 @import "mobile";
 
 body {
-  font-family: "lato";
+  font-family: "lato",sans-serif;
   color: $textColor;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .sidebar .nav-links li .sub-menu a {
-  color: #ffffff;
+  color: $white;
   font-size: 16px;
   font-weight: 400;
   padding: 10px 0;
@@ -211,7 +211,7 @@ body {
   width: calc(100% - 78px);
 }
 
-// home header
+// Home header
 .home-header {
   height: 60px;
   display: flex;
@@ -234,7 +234,6 @@ body {
     font-size: 16px;
     color: #111111;
     font-weight: 400;
-    font-size: 16px;
     line-height: 19px;
   }
 
@@ -282,7 +281,7 @@ body {
   margin: 10px;
   padding: 10px;
   .title__text {
-    font-family: "Oswald";
+    font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 32px;
     color: #000000;
@@ -345,7 +344,7 @@ body {
       &.active {
         opacity: 1;
         background-color: $primary;
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -412,7 +411,7 @@ body {
     flex-wrap: wrap;
     span {
       border: 1px solid #dddddd;
-      background-color: #ffffff;
+      background-color: $white;
       padding: 3px 10px;
       border-radius: 6px;
     }
@@ -426,7 +425,7 @@ body {
     border-radius: 6px;
     line-height: 19px;
     padding: 3px;
-    background-color: #ffffff;
+    background-color: $white;
     color: $primary;
   }
   .filter__right {
@@ -471,7 +470,7 @@ body {
     border-radius: 6px;
     height: 32px;
     width: 169px;
-    background-color: #ffffff;
+    background-color: $white;
     font-size: 16px;
     font-family: "lato",sans-serif;
   }
@@ -509,7 +508,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 85%;
-    background-color: #ffffff;
+    background-color: $white;
     height: auto;
     .dealer__content-header {
       display: flex;
@@ -552,7 +551,7 @@ body {
           border: none;
           background: #f7bf31;
           border-radius: 100px;
-          color: #ffffff;
+          color: $white;
           padding: 5px 12px;
           margin-right: 12px;
         }
@@ -562,7 +561,7 @@ body {
           border: none;
           background: #76c344;
           border-radius: 100px;
-          color: #ffffff;
+          color: $white;
           padding: 5px 12px;
           margin-right: 12px;
         }
@@ -650,7 +649,7 @@ body {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        color: #ffffff;
+        color: $white;
         text-align: center;
         border-radius: 0px 12px;
         position: absolute;
@@ -688,7 +687,7 @@ body {
       width: 196px;
       height: 44px;
       border: none;
-      color: #ffffff;
+      color: $white;
       font-weight: 700;
     }
     .visit-casino::before {
@@ -769,10 +768,10 @@ body {
   max-width: 398px;
   max-height: 52px;
   text-align: center;
-  background: #ffffff;
+  background: $white;
   font-weight: 700;
   text-transform: uppercase;
-  color: #1e60e1;
+  color: $primary;
   margin: 25px auto;
   padding: 17px;
   border-radius: 6px;
@@ -791,7 +790,7 @@ body {
     .page-number {
       width: 36px;
       height: 36px;
-      background: #ffffff;
+      background: $white;
       border-radius: 6px;
       font-weight: 700;
       font-size: 16px;
@@ -805,7 +804,7 @@ body {
     }
     .active {
       background-color: $primary;
-      color: #ffffff;
+      color: $white;
     }
   }
   .pagination__page-index {
@@ -822,7 +821,7 @@ body {
 .description {
   display: flex;
   margin: 20px;
-  background-color: #ffffff;
+  background-color: $white;
   flex-direction: row;
   border-radius: 6px;
   .description__word {
@@ -1037,7 +1036,6 @@ body {
   .footer__description {
     font-size: 14px;
     color: #999999;
-    font-size: 14px;
     line-height: 17px;
     width: 50%;
     order: 3;
@@ -1121,7 +1119,7 @@ body {
   .home-header {
     background-color: #0c1245;
     .bx-menu {
-      color: #ffffff !important;
+      color: $white !important;
     }
     .home-header__logo {
       display: block !important;
@@ -1133,17 +1131,16 @@ body {
     .home-header__icons {
       .home-header__select-nation {
         background-color: #0c1245;
-        color: #ffffff;
+        color: $white;
       }
       .home-content__search {
-        color: #ffffff;
+        color: $white;
       }
     }
   }
   .breadcrumbs-ipad {
     display: block;
     align-items: center;
-    font-size: 16px;
     font-size: 16px;
     line-height: 19px;
     padding: 10px;

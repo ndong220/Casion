@@ -663,7 +663,7 @@ button {
   }
 }
 body {
-  font-family: "lato";
+  font-family: "lato", sans-serif;
   color: #111111;
 }
 
@@ -875,7 +875,6 @@ body {
   font-size: 16px;
   color: #111111;
   font-weight: 400;
-  font-size: 16px;
   line-height: 19px;
 }
 .home-header .breadcrumbs a {
@@ -922,7 +921,7 @@ body {
   padding: 10px;
 }
 .title .title__text {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #000000;
@@ -1399,7 +1398,7 @@ body {
   background: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
-  color: #1e60e1;
+  color: #1E60E1;
   margin: 25px auto;
   padding: 17px;
   border-radius: 6px;
@@ -1658,7 +1657,6 @@ body {
 .footer .footer__description {
   font-size: 14px;
   color: #999999;
-  font-size: 14px;
   line-height: 17px;
   width: 50%;
   order: 3;
@@ -1749,7 +1747,6 @@ body {
   .breadcrumbs-ipad {
     display: block;
     align-items: center;
-    font-size: 16px;
     font-size: 16px;
     line-height: 19px;
     padding: 10px;
