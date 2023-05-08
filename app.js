@@ -1,4 +1,4 @@
-// Hàm xử lý đóng mở sidebar
+// The function to handle opening and closing the sidebar
 const arrow = document.querySelectorAll(".arrow");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtn = document.querySelector(".bx-menu");
@@ -17,7 +17,7 @@ sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("sidebar--close");
   logo.classList.toggle("small-logo");
 });
-// xử lý sự kiện click ra ngoài chỉ khi độ phân giải màn hình nằm trong khoảng giá trị mong muốn
+// handle the click out event only when the screen resolution is within the desired value range
 if (mediaQuery.matches) {
   body.addEventListener("click", (e) => {
     const screenWidth = window.innerWidth;
@@ -30,10 +30,7 @@ if (mediaQuery.matches) {
   });
 }
 
-
-
-
-// hàm thay đổi các tab
+// Function to change tabs
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -63,9 +60,7 @@ tabs.forEach((tab, index) => {
   };
 });
 
-
-
-// hàm show more, show less nội dung văn bản
+// Function show more, show less text content
 const content = document.querySelector(".tab__show");
 const expandBtn = document.querySelector(".expand-btn");
 const collapseBtn = document.querySelector(".collapse-btn");
@@ -78,21 +73,19 @@ expandBtn.addEventListener("click", function () {
 });
 
 collapseBtn.addEventListener("click", function () {
-  content.style.height = "110px";
+  content.style.height = "45px";
   collapseBtn.style.display = "none";
   expandBtn.style.display = "block";
   content.classList.add("fadeout");
 });
 
 window.onload = function () {
-  content.style.height = "110px";
+  content.style.height = "45px";
   collapseBtn.style.display = "none";
   expandBtn.style.display = "block";
 };
 
-
-
-// đóng mở nội dung trong các thẻ 
+//  Open and close content in tags
 function toggleViewAll(event) {
   const button = event.currentTarget;
   const isMobile = window.innerWidth <= 576;
@@ -114,7 +107,7 @@ function toggleViewAll(event) {
       : 'Less Details <i class="fa-sharp fa-solid fa-chevron-up"></i>';
   }
 }
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const lessDetailsButtons = document.querySelectorAll(".less-details");
 
   lessDetailsButtons.forEach((button) => {
@@ -122,12 +115,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-
-// hàm mở và đóng câu hỏi
+// The function opens and closes the question
 const questions = document.querySelectorAll(".question");
 questions.forEach((question) => {
-  const title = question.querySelector(".question__title");
   const answer = question.querySelector(".question__answer");
   const icon = question.querySelector(".fa-solid");
 
@@ -144,23 +134,21 @@ questions.forEach((question) => {
   });
 });
 
-
-
-// Hàm xử lý cuộn trang và chọn menu
+// Function to handle page scroll and menu selection
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Thêm class active-item vào phần tử đầu tiên trong danh sách menuItems để nó được kích hoạt mặc định
+// Add the class active-item to the first element in the menuItems list so that it is enabled by default
 menuItems[0].classList.add("active-item");
 
-// sử dụng intersection observer để phát hiện khi phần tử hiển thị trên màn hình
+// use intersection observer to detect when element is visible on screen
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // xóa lớp active khỏi tất cả các menu item
+        // remove active class from all menu items
         menuItems.forEach((item) => item.classList.remove("active-item"));
 
-        // thêm lớp active cho menu item hiện tại
+        // add active class for current menu item
         const currentMenuItem = document.querySelector(
           `.menu-item[data-id="${entry.target.id}"]`
         );
@@ -171,23 +159,21 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-// cuộn trang và click trên menu item
+// scroll the page and click on the menu item
 menuItems.forEach((item) => {
   const targetId = item.getAttribute("data-id");
   const target = document.getElementById(targetId);
 
-  // theo dõi sự kiện click của menu item
+  // track the click event of the menu item
   item.addEventListener("click", () => {
     target.scrollIntoView({ behavior: "smooth" });
-    //Khi phần tử item được nhấp chuột, trang web sẽ cuộn đến phần tử có id là target và áp dụng hiệu ứng smooth (mượt mà) khi cuộn.
+    // When the item element is clicked, the web page will scroll to the element with the id of target and apply a smoothing effect on scrolling.
   });
 
   observer.observe(target);
 });
 
-
-
-// active màu btn next và pre trên mobile
+// active color btn next and pre on mobile
 let activeButton = null;
 document.querySelectorAll(".btn-pagination").forEach((button) => {
   button.addEventListener("click", function () {
@@ -205,8 +191,7 @@ document.querySelectorAll(".btn-pagination").forEach((button) => {
   });
 });
 
-
-// Đóng mở câu hỏi
+// Close and open the question
 const titleOneButtons = document.querySelectorAll(".desciption__title-one");
 titleOneButtons.forEach((button) => {
   const titleOne = button.nextElementSibling;
@@ -222,5 +207,3 @@ titleOneButtons.forEach((button) => {
     }
   });
 });
-
-
