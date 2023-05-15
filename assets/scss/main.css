@@ -1526,6 +1526,12 @@ body {
   padding: 10px;
   min-width: 100px;
 }
+.description .description__word .table .table__cell-data {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100px;
+}
 .description .description__word .table .table__cell--60 {
   flex-basis: 60%;
 }

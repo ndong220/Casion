@@ -896,6 +896,12 @@ body {
         padding: 10px;
         min-width: 100px;
       }
+      .table__cell-data {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100px;
+      }
       .table__cell--60 {
         flex-basis: 60%;
       }
@@ -938,7 +944,6 @@ body {
         margin-right: 10px;
         font-size: 24px;
       }
-
       .question__title {
         margin: 0;
         padding: 10px;
